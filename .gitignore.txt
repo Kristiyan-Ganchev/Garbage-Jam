@@ -1,8 +1,0 @@
-# Godot-specific ignores
-.godot/
-*.tmp
-export_presets.cfg
-# Android / iOS / Web build artifacts
-android/
-ios/
-build/
