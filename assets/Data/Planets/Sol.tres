@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://c1w5d41n3vdf5"]
+
+[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://planet_data.gd" id="1_3xhik"]
+[ext_resource type="Texture2D" uid="uid://cbg3adgik1y20" path="res://assets/Sprites/Sol-Sheet.png" id="2_4od78"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upoy5"]
+atlas = ExtResource("2_4od78")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pos7o"]
+atlas = ExtResource("2_4od78")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bllso"]
+atlas = ExtResource("2_4od78")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foftl"]
+atlas = ExtResource("2_4od78")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_chuch"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_upoy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pos7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bllso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foftl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_3xhik")
+planet_name = "Sol"
+sprite_frames = SubResource("SpriteFrames_chuch")
+metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cg2puipydlpp6"]
+
+[ext_resource type="PackedScene" uid="uid://baqpjy5ows4t8" path="res://assets/Scenes/mouse_manager.tscn" id="1_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://pbcbyjckq2p7" path="res://assets/Sprites/Space-Background.png" id="1_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dk5jhnxyrmepy" path="res://assets/Scenes/planet.tscn" id="4_iywne"]
+[ext_resource type="Resource" uid="uid://ca2v8bs4ku3fj" path="res://assets/Data/Planets/Terra.tres" id="5_iywne"]
+[ext_resource type="Resource" uid="uid://c1w5d41n3vdf5" path="res://assets/Data/Planets/Sol.tres" id="6_p57ef"]
+
+[node name="Game" type="Node2D" unique_id=2048853854]
+
+[node name="MouseManager" parent="." unique_id=649074943 instance=ExtResource("1_lbhrr")]
+
+[node name="SpaceBackground" type="Sprite2D" parent="." unique_id=1303695049]
+texture = ExtResource("1_lnu2h")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=60475177]
+
+[node name="Sol" parent="." unique_id=444415671 instance=ExtResource("4_iywne")]
+position = Vector2(-96, 69)
+planet_info = ExtResource("6_p57ef")
+
+[node name="Terra" parent="." unique_id=1425897878 instance=ExtResource("4_iywne")]
+position = Vector2(-82, 4)
+planet_info = ExtResource("5_iywne")

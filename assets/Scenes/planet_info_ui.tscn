@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bldxncswjaopl"]
+
+[ext_resource type="Texture2D" uid="uid://dq0w6ohqgug2b" path="res://assets/Sprites/Planet-UI.png" id="1_4pten"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bjyqg"]
+
+[node name="planet_info_ui" type="CanvasLayer" unique_id=413388823]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2092404238]
+texture = ExtResource("1_4pten")
+
+[node name="Label" type="Label" parent="." unique_id=1322253314]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "ABC"
+label_settings = SubResource("LabelSettings_bjyqg")

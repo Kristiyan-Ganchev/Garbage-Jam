@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bhbil0jqlk14n"]
+
+[sub_resource type="TileSet" id="TileSet_i5sh4"]
+tile_shape = 1
+tile_size = Vector2i(16, 8)
+
+[node name="IsometricBattle" type="Node2D" unique_id=18123048]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=712913415]
+tile_set = SubResource("TileSet_i5sh4")

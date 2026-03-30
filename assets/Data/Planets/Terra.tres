@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://ca2v8bs4ku3fj"]
+
+[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://planet_data.gd" id="1_l56db"]
+[ext_resource type="Texture2D" uid="uid://dysl5edjc1a75" path="res://assets/Sprites/Terra-Sheet.png" id="2_s6xc7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06lc0"]
+atlas = ExtResource("2_s6xc7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3i4lh"]
+atlas = ExtResource("2_s6xc7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8l32r"]
+atlas = ExtResource("2_s6xc7")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dd32"]
+atlas = ExtResource("2_s6xc7")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d1w0h"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_06lc0")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_3i4lh")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_8l32r")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_0dd32")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_l56db")
+planet_name = "Terra"
+sprite_frames = SubResource("SpriteFrames_d1w0h")
+metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

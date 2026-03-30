@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dk5jhnxyrmepy"]
+
+[ext_resource type="Script" uid="uid://cr3sxododugtq" path="res://planet.gd" id="1_acrkg"]
+[ext_resource type="Texture2D" uid="uid://dq0w6ohqgug2b" path="res://assets/Sprites/Planet-UI.png" id="2_064bp"]
+[ext_resource type="Shader" uid="uid://dur6nykl2j5do" path="res://assets/Shaders/planet_outline.gdshader" id="2_ekbt2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_acrkg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ekbt2"]
+shader = ExtResource("2_ekbt2")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/corner_pixel = false
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_acrkg"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Planet" type="Area2D" unique_id=444415671]
+z_index = 5
+collision_layer = 2
+script = ExtResource("1_acrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=513085785]
+shape = SubResource("CircleShape2D_acrkg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=340903853]
+material = SubResource("ShaderMaterial_ekbt2")
+instance_shader_parameters/active = false
+sprite_frames = SubResource("SpriteFrames_acrkg")
+animation = &"idle"
+
+[node name="MenuAnchor" type="Node2D" parent="." unique_id=269314941]
+position = Vector2(27, 8)
+
+[node name="MenuSprite" type="Sprite2D" parent="MenuAnchor" unique_id=1242367442]
+visible = false
+z_index = 10
+texture = ExtResource("2_064bp")
