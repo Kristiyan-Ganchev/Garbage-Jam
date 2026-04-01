@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bo7v1gu06wb3f"]
+
+[ext_resource type="Texture2D" uid="uid://ccis62803ebdj" path="res://assets/Sprites/Galaxy-Background.png" id="1_4dj1w"]
+[ext_resource type="PackedScene" uid="uid://du78lgeqopsum" path="res://assets/Scenes/system.tscn" id="2_b8q3g"]
+[ext_resource type="Resource" uid="uid://bpmv5ul6csfsk" path="res://assets/Data/Systems/SolarSystem.tres" id="3_jkcgg"]
+
+[node name="GalaxyMap" type="Node2D" unique_id=851310725]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=3966409]
+texture = ExtResource("1_4dj1w")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2095775795]
+
+[node name="System" parent="." unique_id=1319791607 instance=ExtResource("2_b8q3g")]
+position = Vector2(53, 71)
+system_info = ExtResource("3_jkcgg")

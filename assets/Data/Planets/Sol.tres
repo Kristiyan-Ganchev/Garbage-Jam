@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://c1w5d41n3vdf5"]
 
-[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://planet_data.gd" id="1_3xhik"]
+[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://assets/Scripts/planet_data.gd" id="1_tiw2a"]
 [ext_resource type="Texture2D" uid="uid://cbg3adgik1y20" path="res://assets/Sprites/Sol-Sheet.png" id="2_4od78"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_upoy5"]
@@ -35,12 +35,12 @@ animations = [{
 "texture": SubResource("AtlasTexture_foftl")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"default",
 "speed": 5.0
 }]
 
 [resource]
-script = ExtResource("1_3xhik")
-planet_name = "Sol"
+script = ExtResource("1_tiw2a")
+planet_name = "SOL"
 sprite_frames = SubResource("SpriteFrames_chuch")
 metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

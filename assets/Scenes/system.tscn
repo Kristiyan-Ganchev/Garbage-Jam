@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://du78lgeqopsum"]
+
+[ext_resource type="Script" uid="uid://cf2atswk8bpkb" path="res://assets/Scripts/system.gd" id="1_kuasm"]
+[ext_resource type="Shader" uid="uid://dur6nykl2j5do" path="res://assets/Shaders/planet_outline.gdshader" id="2_ygl7y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iy7gh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ewy08"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b4qv8"]
+shader = ExtResource("2_ygl7y")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/corner_pixel = false
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r8v6n"]
+
+[node name="System" type="Area2D" unique_id=1319791607]
+material = SubResource("ShaderMaterial_iy7gh")
+script = ExtResource("1_kuasm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1720881538]
+shape = SubResource("CircleShape2D_ewy08")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1465899353]
+material = SubResource("ShaderMaterial_b4qv8")
+sprite_frames = SubResource("SpriteFrames_r8v6n")

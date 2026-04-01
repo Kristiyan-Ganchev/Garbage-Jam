@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dk5jhnxyrmepy"]
 
-[ext_resource type="Script" uid="uid://cr3sxododugtq" path="res://planet.gd" id="1_acrkg"]
-[ext_resource type="Texture2D" uid="uid://dq0w6ohqgug2b" path="res://assets/Sprites/Planet-UI.png" id="2_064bp"]
+[ext_resource type="Script" uid="uid://cr3sxododugtq" path="res://assets/Scripts/planet.gd" id="1_acrkg"]
 [ext_resource type="Shader" uid="uid://dur6nykl2j5do" path="res://assets/Shaders/planet_outline.gdshader" id="2_ekbt2"]
+[ext_resource type="PackedScene" uid="uid://bldxncswjaopl" path="res://assets/Scenes/planet_info_ui.tscn" id="3_ekbt2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_acrkg"]
 
@@ -19,7 +19,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Planet" type="Area2D" unique_id=444415671]
+[node name="Planet" type="Area2D" unique_id=444415671 groups=["planet"]]
 z_index = 5
 collision_layer = 2
 script = ExtResource("1_acrkg")
@@ -36,7 +36,4 @@ animation = &"idle"
 [node name="MenuAnchor" type="Node2D" parent="." unique_id=269314941]
 position = Vector2(27, 8)
 
-[node name="MenuSprite" type="Sprite2D" parent="MenuAnchor" unique_id=1242367442]
-visible = false
-z_index = 10
-texture = ExtResource("2_064bp")
+[node name="planet_info_ui" parent="MenuAnchor" unique_id=413388823 instance=ExtResource("3_ekbt2")]

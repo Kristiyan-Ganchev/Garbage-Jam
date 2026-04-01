@@ -1,16 +1,45 @@
 [gd_scene format=3 uid="uid://bldxncswjaopl"]
 
-[ext_resource type="Texture2D" uid="uid://dq0w6ohqgug2b" path="res://assets/Sprites/Planet-UI.png" id="1_4pten"]
+[ext_resource type="Texture2D" uid="uid://wlp2x6r7c6f0" path="res://assets/Sprites/PlanetUI.png" id="1_glpcn"]
+[ext_resource type="FontFile" uid="uid://cwvynjg11d8vk" path="res://assets/Sprites/font.png" id="2_glpcn"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_bjyqg"]
+[sub_resource type="Theme" id="Theme_glpcn"]
+default_font = ExtResource("2_glpcn")
 
-[node name="planet_info_ui" type="CanvasLayer" unique_id=413388823]
+[sub_resource type="LabelSettings" id="LabelSettings_eoj3i"]
+
+[node name="planet_info_ui" type="Node2D" unique_id=1680578980]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2092404238]
-texture = ExtResource("1_4pten")
+texture = ExtResource("1_glpcn")
 
-[node name="Label" type="Label" parent="." unique_id=1322253314]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "ABC"
-label_settings = SubResource("LabelSettings_bjyqg")
+[node name="NameLabel" type="Label" parent="." unique_id=1322253314]
+offset_left = 1.0000005
+offset_top = -22.0
+offset_right = 65.0
+offset_bottom = -6.0
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_glpcn")
+theme_override_font_sizes/font_size = 16
+text = "TERRA"
+label_settings = SubResource("LabelSettings_eoj3i")
+
+[node name="PopLabel" type="Label" parent="." unique_id=1000110572]
+offset_left = 67.0
+offset_top = -16.0
+offset_right = 80.0
+theme = SubResource("Theme_glpcn")
+theme_override_font_sizes/font_size = 16
+text = "0"
+label_settings = SubResource("LabelSettings_eoj3i")
+
+[node name="RsrLabel" type="Label" parent="." unique_id=2038620370]
+offset_left = 3.0000005
+offset_top = -5.0
+offset_right = 170.0
+offset_bottom = 11.0
+scale = Vector2(0.2, 0.2)
+theme = SubResource("Theme_glpcn")
+theme_override_font_sizes/font_size = 16
+text = "HOPE 0 TECH 0"
+label_settings = SubResource("LabelSettings_eoj3i")

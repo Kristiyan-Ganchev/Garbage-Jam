@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://ca2v8bs4ku3fj"]
 
-[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://planet_data.gd" id="1_l56db"]
+[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://assets/Scripts/planet_data.gd" id="1_jnwte"]
 [ext_resource type="Texture2D" uid="uid://dysl5edjc1a75" path="res://assets/Sprites/Terra-Sheet.png" id="2_s6xc7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06lc0"]
@@ -35,12 +35,14 @@ animations = [{
 "texture": SubResource("AtlasTexture_0dd32")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"default",
 "speed": 5.0
 }]
 
 [resource]
-script = ExtResource("1_l56db")
-planet_name = "Terra"
+script = ExtResource("1_jnwte")
+planet_name = "TERRA"
+controlled_by = 2
+population = 1
 sprite_frames = SubResource("SpriteFrames_d1w0h")
 metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

@@ -1,9 +1,9 @@
 extends Area2D
-class_name Planet
+class_name System
 
-@export var planet_info: PlanetData
+@export var system_info: SystemData
 
-@onready var menu = $MenuAnchor/MenuSprite
+
 # Called when the node enters the scene tree for the first time.
 func _on_mouse_entered():
 	$AnimatedSprite2D.set_instance_shader_parameter("active", true)
@@ -12,13 +12,12 @@ func _on_mouse_exited():
 	$AnimatedSprite2D.set_instance_shader_parameter("active", false)
 	
 func _ready() -> void:
-	menu.hide()
-	if planet_info:
+	if system_info:
 		mouse_entered.connect(_on_mouse_entered)
 		mouse_exited.connect(_on_mouse_exited)
-		
-		$AnimatedSprite2D.sprite_frames = planet_info.sprite_frames
-		$AnimatedSprite2D.play("idle")
+
+		$AnimatedSprite2D.sprite_frames = system_info.sprite_frames
+		$AnimatedSprite2D.play("default")
 		
 		$AnimatedSprite2D.set_instance_shader_parameter("active",false)
 
@@ -27,6 +26,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
 func handle_click() -> void:
-	menu.visible = !menu.visible
-	
+	TurnManager.currentElement = self
+	get_tree().change_scene_to_file("res://scenes/solar_system.tscn")

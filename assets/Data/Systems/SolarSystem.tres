@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="SystemData" format=3 uid="uid://bpmv5ul6csfsk"]
+
+[ext_resource type="Script" uid="uid://bq70yaio5j201" path="res://assets/Scripts/system_data.gd" id="1_jqjch"]
+[ext_resource type="Texture2D" uid="uid://c4cmm1glf30oo" path="res://assets/Sprites/Solar-system.png" id="2_jqjch"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8fnn"]
+atlas = ExtResource("2_jqjch")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuymp"]
+atlas = ExtResource("2_jqjch")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m488"]
+atlas = ExtResource("2_jqjch")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdno7"]
+atlas = ExtResource("2_jqjch")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_el8w4"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_b8fnn")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_yuymp")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_7m488")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_sdno7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_jqjch")
+system_name = "Solar System"
+controlled_by = 2
+sprite_frames = SubResource("SpriteFrames_el8w4")
+metadata/_custom_type_script = "uid://bq70yaio5j201"

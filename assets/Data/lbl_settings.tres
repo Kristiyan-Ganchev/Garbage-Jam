@@ -1,3 +1,6 @@
 [gd_resource type="LabelSettings" format=3 uid="uid://rpucp7fs68ol"]
 
+[ext_resource type="FontFile" uid="uid://cwvynjg11d8vk" path="res://assets/Sprites/font.png" id="1_wit5c"]
+
 [resource]
+font = ExtResource("1_wit5c")
