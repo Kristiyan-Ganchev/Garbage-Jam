@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://vyrsh35mp7gy"]
+
+[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://assets/Scripts/planet_data.gd" id="1_444ob"]
+[ext_resource type="Texture2D" uid="uid://cpst2bw7g4hsl" path="res://assets/Sprites/Proxima-d-Sheet.png" id="2_ke4o1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwm8o"]
+atlas = ExtResource("2_ke4o1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmerj"]
+atlas = ExtResource("2_ke4o1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5xol"]
+atlas = ExtResource("2_ke4o1")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8wcv"]
+atlas = ExtResource("2_ke4o1")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xyt6g"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_gwm8o")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_bmerj")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_s5xol")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_s8wcv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_444ob")
+planet_name = "PROXIMA-D"
+sprite_frames = SubResource("SpriteFrames_xyt6g")
+mat_type = 3
+metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

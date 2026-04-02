@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://cg5pn5cyl36ii"]
+
+[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://assets/Scripts/planet_data.gd" id="1_qmltn"]
+[ext_resource type="Texture2D" uid="uid://dqwu8anf8x3c4" path="res://assets/Sprites/AC-ab-Sheet.png" id="2_omoik"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i04pg"]
+atlas = ExtResource("2_omoik")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8524"]
+atlas = ExtResource("2_omoik")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u77c4"]
+atlas = ExtResource("2_omoik")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7jlm"]
+atlas = ExtResource("2_omoik")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bopre"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_i04pg")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_v8524")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_u77c4")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_k7jlm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_qmltn")
+planet_name = "AC-AB"
+sprite_frames = SubResource("SpriteFrames_bopre")
+mat_type = 3
+metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

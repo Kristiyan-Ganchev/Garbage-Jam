@@ -17,10 +17,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-TurnManager="*uid://bn70grwcxfdj1"
 ControlledEnum="*uid://wnqdx227ih8e"
 MouseManager="*uid://ccpisdaicu3yw"
 MatManager="*uid://eemsuokaiq46"
+TurnManager="*uid://cwij5dk48jsw3"
+UiManager="*uid://cr1hfqpelii3v"
+Ui="*uid://tufagnmiix15"
 
 [display]
 

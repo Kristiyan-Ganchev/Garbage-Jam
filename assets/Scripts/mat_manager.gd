@@ -8,6 +8,9 @@ extends Node2D
 @export var suns: int = 0
 @export var heavy: int = 0
 @export var lich: int = 0
+@export var ships: int = 0
+@export var interstellars: int = 0
+@export var fighters: int = 0  
 
 func grow_mats(mat_type: GameEnums.Mats,amount: int) -> void:
 	match mat_type:
@@ -20,3 +23,12 @@ func grow_mats(mat_type: GameEnums.Mats,amount: int) -> void:
 		GameEnums.Mats.LICH:
 			lich+= amount
 	pass
+
+func get_ships(num:int) -> void:
+	ships +=num
+
+func get_interstellars(num:int) -> void:
+	interstellars +=num
+	
+func get_fighters(num:int) -> void:
+	fighters +=num

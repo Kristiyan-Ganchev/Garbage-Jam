@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	TurnManager.process_population()
+	TurnManager.process_planets()
 	pass # Replace with function body.
 
 

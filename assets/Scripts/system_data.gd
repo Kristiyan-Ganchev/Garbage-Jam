@@ -8,3 +8,4 @@ class_name SystemData
 @export var tech: int = 0
 @export var hope: int = 0
 @export var sprite_frames: SpriteFrames
+@export var scene: PackedScene = null

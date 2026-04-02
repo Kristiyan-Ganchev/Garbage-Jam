@@ -26,76 +26,86 @@ script = ExtResource("1_dxoq3")
 
 [node name="Button" type="Button" parent="." unique_id=450964358]
 layout_mode = 0
-offset_left = 107.0
-offset_top = 87.0
-offset_right = 154.0
-offset_bottom = 111.0
+offset_left = 269.0
+offset_top = 209.0
+offset_right = 316.0
+offset_bottom = 233.0
 theme = SubResource("Theme_dxoq3")
 text = "END"
 
 [node name="PopLbl" type="Label" parent="." unique_id=1288767387]
 layout_mode = 0
-offset_left = -153.0
-offset_top = 92.0
-offset_right = -25.0
-offset_bottom = 115.0
+offset_left = 9.0
+offset_top = 214.0
+offset_right = 137.0
+offset_bottom = 237.0
 theme = SubResource("Theme_a4q53")
 text = "POPULATION"
 
 [node name="TurnLbl" type="Label" parent="." unique_id=826729704]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 91.0
-offset_right = 68.0
-offset_bottom = 114.0
+offset_left = 178.0
+offset_top = 213.0
+offset_right = 230.0
+offset_bottom = 236.0
 theme = SubResource("Theme_a4q53")
 text = "TURN"
 
 [node name="Exit" type="Button" parent="." unique_id=454328052]
 layout_mode = 0
-offset_left = 94.0
-offset_top = 59.0
-offset_right = 154.0
-offset_bottom = 83.0
+offset_left = 256.0
+offset_top = 181.0
+offset_right = 316.0
+offset_bottom = 205.0
 theme = SubResource("Theme_xoeno")
 text = "BACK"
 
-[node name="MaterialLbl" type="Label" parent="." unique_id=1572384923]
+[node name="MatsLbl" type="Label" parent="." unique_id=1572384923]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 27.0
-offset_right = 154.0
-offset_bottom = 50.0
+offset_left = 192.0
+offset_top = 149.0
+offset_right = 316.0
+offset_bottom = 172.0
 theme = SubResource("Theme_5uumt")
 text = "MATS 0"
 horizontal_alignment = 2
 
 [node name="MaterialLbl2" type="Label" parent="." unique_id=1510766896]
 layout_mode = 0
-offset_left = 63.0
-offset_top = -5.0
-offset_right = 153.0
-offset_bottom = 18.0
+offset_left = 225.0
+offset_top = 117.0
+offset_right = 315.0
+offset_bottom = 140.0
 theme = SubResource("Theme_5uumt")
 text = "HEAVY 0"
 horizontal_alignment = 2
 
 [node name="MaterialLbl3" type="Label" parent="." unique_id=730477045]
 layout_mode = 0
-offset_left = -69.0
-offset_top = -71.0
-offset_right = 153.0
-offset_bottom = -48.0
+offset_left = 93.0
+offset_top = 51.0
+offset_right = 315.0
+offset_bottom = 74.0
 theme = SubResource("Theme_5uumt")
 text = "LICHIUM 0"
 horizontal_alignment = 2
 
 [node name="MaterialLbl4" type="Label" parent="." unique_id=600926992]
 layout_mode = 0
-offset_left = 76.0
-offset_top = -41.0
-offset_right = 153.0
-offset_bottom = -18.0
+offset_left = 238.0
+offset_top = 81.0
+offset_right = 315.0
+offset_bottom = 104.0
 theme = SubResource("Theme_5uumt")
 text = "SUNS 0"
+horizontal_alignment = 2
+
+[node name="Ships" type="Label" parent="." unique_id=938597525]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 21.0
+offset_right = 314.0
+offset_bottom = 44.0
+theme = SubResource("Theme_5uumt")
+text = "SHIPS 0"
 horizontal_alignment = 2

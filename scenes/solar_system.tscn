@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://dk5jhnxyrmepy" path="res://assets/Scenes/planet.tscn" id="4_ol65s"]
 [ext_resource type="Resource" uid="uid://c1w5d41n3vdf5" path="res://assets/Data/Planets/Sol.tres" id="5_8ogpx"]
 [ext_resource type="Resource" uid="uid://ca2v8bs4ku3fj" path="res://assets/Data/Planets/Terra.tres" id="6_j4qti"]
-[ext_resource type="PackedScene" uid="uid://dcjj52s5o4mig" path="res://assets/Scenes/turn_ui.tscn" id="7_qytic"]
 
 [node name="Solar" type="Node2D" unique_id=2048853854]
 script = ExtResource("1_2yas3")
@@ -22,8 +21,3 @@ planet_info = ExtResource("5_8ogpx")
 [node name="Terra" parent="." unique_id=1425897878 instance=ExtResource("4_ol65s")]
 position = Vector2(-82, 4)
 planet_info = ExtResource("6_j4qti")
-
-[node name="TurnUi" parent="." unique_id=1357631792 instance=ExtResource("7_qytic")]
-anchors_preset = 9
-anchor_right = 0.0
-grow_horizontal = 1

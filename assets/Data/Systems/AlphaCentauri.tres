@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="SystemData" format=3 uid="uid://0lkm5t0csgle"]
+
+[ext_resource type="PackedScene" uid="uid://ul03ib0mp4wr" path="res://scenes/alpha_centauri.tscn" id="1_fe2xt"]
+[ext_resource type="Script" uid="uid://bq70yaio5j201" path="res://assets/Scripts/system_data.gd" id="1_w0fmg"]
+[ext_resource type="Texture2D" uid="uid://dixcdblw5wx8r" path="res://assets/Sprites/AlphaCentauri-Sheet.png" id="2_s4iw4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe2xt"]
+atlas = ExtResource("2_s4iw4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiu2i"]
+atlas = ExtResource("2_s4iw4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7scb"]
+atlas = ExtResource("2_s4iw4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w38lc"]
+atlas = ExtResource("2_s4iw4")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pxpcg"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_fe2xt")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_hiu2i")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_u7scb")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_w38lc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_w0fmg")
+system_name = "AlphaCentauri"
+controlled_by = 1
+sprite_frames = SubResource("SpriteFrames_pxpcg")
+scene = ExtResource("1_fe2xt")
+metadata/_custom_type_script = "uid://bq70yaio5j201"

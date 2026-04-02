@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://cxqfrdw8368yf"]
+
+[ext_resource type="FontFile" uid="uid://cwvynjg11d8vk" path="res://assets/Sprites/font.png" id="1_jrvbq"]
+
+[sub_resource type="Theme" id="Theme_nbgyl"]
+default_font = ExtResource("1_jrvbq")
+
+[sub_resource type="Theme" id="Theme_5ge4j"]
+default_font = ExtResource("1_jrvbq")
+
+[sub_resource type="Theme" id="Theme_wrs1t"]
+default_font = ExtResource("1_jrvbq")
+
+[node name="BuildUi" type="Control" unique_id=1152488168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Build" type="Button" parent="." unique_id=1583647672]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 204.0
+offset_right = 311.0
+offset_bottom = 228.0
+theme = SubResource("Theme_nbgyl")
+text = "BUILD"
+
+[node name="Cancel" type="Button" parent="." unique_id=1675690708]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 176.0
+offset_right = 310.0
+offset_bottom = 200.0
+theme = SubResource("Theme_5ge4j")
+text = "CANCEL"
+
+[node name="MatsLbl" type="Label" parent="." unique_id=48633291]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 144.0
+offset_right = 308.0
+offset_bottom = 167.0
+theme = SubResource("Theme_wrs1t")
+text = "MECH"
+horizontal_alignment = 2
+
+[node name="MaterialLbl2" type="Label" parent="." unique_id=253280628]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 113.0
+offset_right = 310.0
+offset_bottom = 136.0
+theme = SubResource("Theme_wrs1t")
+text = "MECH"
+horizontal_alignment = 2
+
+[node name="MaterialLbl3" type="Label" parent="." unique_id=149039083]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 47.0
+offset_right = 310.0
+offset_bottom = 70.0
+theme = SubResource("Theme_wrs1t")
+text = "INTERSTELLAR"
+horizontal_alignment = 2
+
+[node name="MaterialLbl4" type="Label" parent="." unique_id=1111225013]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 78.0
+offset_right = 309.0
+offset_bottom = 101.0
+theme = SubResource("Theme_wrs1t")
+text = "FIGHTER"
+horizontal_alignment = 2
+
+[node name="Ship" type="Label" parent="." unique_id=1620058987]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 17.0
+offset_right = 309.0
+offset_bottom = 40.0
+theme = SubResource("Theme_wrs1t")
+text = "SHIP"
+horizontal_alignment = 2

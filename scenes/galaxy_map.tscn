@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ccis62803ebdj" path="res://assets/Sprites/Galaxy-Background.png" id="1_4dj1w"]
 [ext_resource type="PackedScene" uid="uid://du78lgeqopsum" path="res://assets/Scenes/system.tscn" id="2_b8q3g"]
 [ext_resource type="Resource" uid="uid://bpmv5ul6csfsk" path="res://assets/Data/Systems/SolarSystem.tres" id="3_jkcgg"]
+[ext_resource type="Resource" uid="uid://0lkm5t0csgle" path="res://assets/Data/Systems/AlphaCentauri.tres" id="4_jkcgg"]
 
 [node name="GalaxyMap" type="Node2D" unique_id=851310725]
 
@@ -11,6 +12,10 @@ texture = ExtResource("1_4dj1w")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2095775795]
 
-[node name="System" parent="." unique_id=1319791607 instance=ExtResource("2_b8q3g")]
+[node name="SolarSystem" parent="." unique_id=1319791607 instance=ExtResource("2_b8q3g")]
 position = Vector2(53, 71)
 system_info = ExtResource("3_jkcgg")
+
+[node name="AlphaCentauri" parent="." unique_id=1392103264 instance=ExtResource("2_b8q3g")]
+position = Vector2(28, 26)
+system_info = ExtResource("4_jkcgg")

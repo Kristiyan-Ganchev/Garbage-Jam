@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="SystemData" format=3 uid="uid://bpmv5ul6csfsk"]
 
+[ext_resource type="PackedScene" uid="uid://dcr5mvpfwfgck" path="res://scenes/solar_system.tscn" id="1_b8fnn"]
 [ext_resource type="Script" uid="uid://bq70yaio5j201" path="res://assets/Scripts/system_data.gd" id="1_jqjch"]
 [ext_resource type="Texture2D" uid="uid://c4cmm1glf30oo" path="res://assets/Sprites/Solar-system.png" id="2_jqjch"]
 
@@ -44,4 +45,5 @@ script = ExtResource("1_jqjch")
 system_name = "Solar System"
 controlled_by = 2
 sprite_frames = SubResource("SpriteFrames_el8w4")
+scene = ExtResource("1_b8fnn")
 metadata/_custom_type_script = "uid://bq70yaio5j201"

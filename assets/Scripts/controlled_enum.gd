@@ -12,3 +12,20 @@ enum Mats {
 	LICH,
 	HEAVY
 }
+enum Builds {
+	SHIP,
+	INTERSTELLAR,
+	FIGHTER,
+	NONE
+}
+
+enum UIs {
+	BUILD,
+	TURN
+}
+
+enum States {
+	Galaxy,
+	System,
+	Planet
+}

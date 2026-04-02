@@ -29,4 +29,6 @@ func _process(delta: float) -> void:
 
 func handle_click() -> void:
 	TurnManager.currentElement = self
-	get_tree().change_scene_to_file("res://scenes/solar_system.tscn")
+	TurnManager.state = GameEnums.States.System
+	UiManager.enable_ui(GameEnums.UIs.TURN)
+	get_tree().change_scene_to_packed(system_info.scene)
