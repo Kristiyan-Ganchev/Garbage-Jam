@@ -69,9 +69,9 @@ func set_build(set_build: GameEnums.Builds) -> void:
 	build = set_build
 	if(build == GameEnums.Builds.SHIP):
 		build_length = ship_build_length
-	if(build == GameEnums.Builds.INTERSTELLAR):
+	elif(build == GameEnums.Builds.INTERSTELLAR):
 		build_length = interstellar_build_length
-	if(build == GameEnums.Builds.FIGHTER):
+	elif(build == GameEnums.Builds.FIGHTER):
 		build_length = fighter_build_length
 	
 func cancel_build() -> void:

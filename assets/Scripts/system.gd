@@ -3,6 +3,8 @@ class_name System
 
 @export var system_info: SystemData
 
+@onready var reach_btn = $ColloniseMenu/Button
+@onready var collonise_menu = $ColloniseMenu
 
 # Called when the node enters the scene tree for the first time.
 func _on_mouse_entered():
@@ -15,7 +17,12 @@ func _ready() -> void:
 	if system_info:
 		mouse_entered.connect(_on_mouse_entered)
 		mouse_exited.connect(_on_mouse_exited)
-
+		
+		collonise_menu.visible=false
+		if(!TurnManager.reached_systems.has(system_info.system_name)):
+			reach_btn.pressed.connect(collonise)
+			collonise_menu.visible = true
+		
 		$AnimatedSprite2D.sprite_frames = system_info.sprite_frames
 		$AnimatedSprite2D.play("default")
 		
@@ -26,9 +33,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func collonise()-> void:
+	print("hello")
+	if(MatManager.interstellars >= system_info.needed_ships):
+		TurnManager.add_system(self.system_info)
+		MatManager.interstellars -= system_info.needed_ships
+	collonise_menu.visible = false
+
 
 func handle_click() -> void:
 	TurnManager.currentElement = self
-	TurnManager.state = GameEnums.States.System
-	UiManager.enable_ui(GameEnums.UIs.TURN)
-	get_tree().change_scene_to_packed(system_info.scene)
+	if(TurnManager.reached_systems.has(system_info.system_name)):
+		TurnManager.state = GameEnums.States.System
+		UiManager.enable_ui(GameEnums.UIs.TURN)
+		get_tree().change_scene_to_packed(system_info.scene)

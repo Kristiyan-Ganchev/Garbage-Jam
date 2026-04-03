@@ -9,3 +9,4 @@ class_name SystemData
 @export var hope: int = 0
 @export var sprite_frames: SpriteFrames
 @export var scene: PackedScene = null
+@export var needed_ships: int = 1

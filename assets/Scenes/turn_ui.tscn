@@ -15,6 +15,12 @@ default_font = ExtResource("1_a4q53")
 [sub_resource type="Theme" id="Theme_5uumt"]
 default_font = ExtResource("1_a4q53")
 
+[sub_resource type="Theme" id="Theme_qvi25"]
+default_font = ExtResource("1_a4q53")
+
+[sub_resource type="Theme" id="Theme_nprlw"]
+default_font = ExtResource("1_a4q53")
+
 [node name="TurnUi" type="Control" unique_id=1357631792]
 layout_mode = 3
 anchors_preset = 15
@@ -35,12 +41,13 @@ text = "END"
 
 [node name="PopLbl" type="Label" parent="." unique_id=1288767387]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 4.0
 offset_top = 214.0
 offset_right = 137.0
 offset_bottom = 237.0
 theme = SubResource("Theme_a4q53")
 text = "POPULATION"
+horizontal_alignment = 2
 
 [node name="TurnLbl" type="Label" parent="." unique_id=826729704]
 layout_mode = 0
@@ -63,49 +70,68 @@ text = "BACK"
 [node name="MatsLbl" type="Label" parent="." unique_id=1572384923]
 layout_mode = 0
 offset_left = 192.0
-offset_top = 149.0
+offset_top = 155.0
 offset_right = 316.0
-offset_bottom = 172.0
+offset_bottom = 178.0
 theme = SubResource("Theme_5uumt")
 text = "MATS 0"
 horizontal_alignment = 2
 
-[node name="MaterialLbl2" type="Label" parent="." unique_id=1510766896]
+[node name="HeavyLbl" type="Label" parent="." unique_id=1510766896]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 117.0
-offset_right = 315.0
-offset_bottom = 140.0
+offset_left = 226.0
+offset_top = 137.0
+offset_right = 316.0
+offset_bottom = 160.0
 theme = SubResource("Theme_5uumt")
 text = "HEAVY 0"
 horizontal_alignment = 2
 
-[node name="MaterialLbl3" type="Label" parent="." unique_id=730477045]
+[node name="SunsLbl" type="Label" parent="." unique_id=730477045]
 layout_mode = 0
-offset_left = 93.0
-offset_top = 51.0
-offset_right = 315.0
-offset_bottom = 74.0
+offset_left = 95.0
+offset_top = 105.0
+offset_right = 317.0
+offset_bottom = 128.0
 theme = SubResource("Theme_5uumt")
 text = "LICHIUM 0"
 horizontal_alignment = 2
 
-[node name="MaterialLbl4" type="Label" parent="." unique_id=600926992]
+[node name="LichLbl" type="Label" parent="." unique_id=600926992]
 layout_mode = 0
-offset_left = 238.0
-offset_top = 81.0
-offset_right = 315.0
-offset_bottom = 104.0
+offset_left = 239.0
+offset_top = 120.0
+offset_right = 316.0
+offset_bottom = 143.0
 theme = SubResource("Theme_5uumt")
 text = "SUNS 0"
 horizontal_alignment = 2
 
 [node name="Ships" type="Label" parent="." unique_id=938597525]
 layout_mode = 0
-offset_left = 92.0
-offset_top = 21.0
-offset_right = 314.0
-offset_bottom = 44.0
+offset_left = 95.0
+offset_top = 90.0
+offset_right = 317.0
+offset_bottom = 113.0
 theme = SubResource("Theme_5uumt")
 text = "SHIPS 0"
 horizontal_alignment = 2
+
+[node name="InterstellarLbl" type="Label" parent="." unique_id=756638804]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 76.0
+offset_right = 317.0
+offset_bottom = 99.0
+theme = SubResource("Theme_qvi25")
+text = "INTERSTELLARS 0"
+horizontal_alignment = 2
+
+[node name="FightersLbl" type="Label" parent="." unique_id=401069120]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 60.0
+offset_right = 317.0
+offset_bottom = 83.0
+theme = SubResource("Theme_nprlw")
+text = "FIGHTERS 0"

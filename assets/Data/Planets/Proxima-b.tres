@@ -42,6 +42,7 @@ animations = [{
 [resource]
 script = ExtResource("1_uau8w")
 planet_name = "PROXIMA-B"
+controlled_by = 1
 sprite_frames = SubResource("SpriteFrames_eg0m5")
 mat_type = 3
 metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

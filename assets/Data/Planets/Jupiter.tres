@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://dew1f88dqaekt"]
+
+[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://assets/Scripts/planet_data.gd" id="1_fkrvn"]
+[ext_resource type="Texture2D" uid="uid://coavo411rjf1e" path="res://assets/Sprites/Jupiter-Sheet.png" id="2_u72hg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s04nc"]
+atlas = ExtResource("2_u72hg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikc4e"]
+atlas = ExtResource("2_u72hg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rert"]
+atlas = ExtResource("2_u72hg")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbewc"]
+atlas = ExtResource("2_u72hg")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h57ko"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s04nc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikc4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rert")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbewc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_fkrvn")
+planet_name = "JUPITER"
+sprite_frames = SubResource("SpriteFrames_h57ko")
+mat_type = 3
+metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

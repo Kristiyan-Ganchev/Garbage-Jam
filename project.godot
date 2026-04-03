@@ -20,16 +20,16 @@ config/icon="res://icon.svg"
 ControlledEnum="*uid://wnqdx227ih8e"
 MouseManager="*uid://ccpisdaicu3yw"
 MatManager="*uid://eemsuokaiq46"
-TurnManager="*uid://cwij5dk48jsw3"
 UiManager="*uid://cr1hfqpelii3v"
 Ui="*uid://tufagnmiix15"
+TurnManager="*uid://s5x664o8jd24"
 
 [display]
 
 window/size/viewport_width=320
 window/size/viewport_height=240
-window/size/window_width_override=1280
-window/size/window_height_override=960
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 

@@ -8,7 +8,16 @@ default_font = ExtResource("1_jrvbq")
 [sub_resource type="Theme" id="Theme_5ge4j"]
 default_font = ExtResource("1_jrvbq")
 
+[sub_resource type="Theme" id="Theme_jrvbq"]
+default_font = ExtResource("1_jrvbq")
+
 [sub_resource type="Theme" id="Theme_wrs1t"]
+default_font = ExtResource("1_jrvbq")
+
+[sub_resource type="Theme" id="Theme_oemnd"]
+default_font = ExtResource("1_jrvbq")
+
+[sub_resource type="Theme" id="Theme_0coba"]
 default_font = ExtResource("1_jrvbq")
 
 [node name="BuildUi" type="Control" unique_id=1152488168]
@@ -37,52 +46,38 @@ offset_bottom = 200.0
 theme = SubResource("Theme_5ge4j")
 text = "CANCEL"
 
-[node name="MatsLbl" type="Label" parent="." unique_id=48633291]
+[node name="ShipBtn" type="Button" parent="." unique_id=123346319]
 layout_mode = 0
-offset_left = 184.0
-offset_top = 144.0
-offset_right = 308.0
-offset_bottom = 167.0
-theme = SubResource("Theme_wrs1t")
-text = "MECH"
-horizontal_alignment = 2
+offset_left = 249.0
+offset_top = 147.0
+offset_right = 309.0
+offset_bottom = 171.0
+theme = SubResource("Theme_jrvbq")
+text = "SHIP"
 
-[node name="MaterialLbl2" type="Label" parent="." unique_id=253280628]
+[node name="InterstellarBtn" type="Button" parent="." unique_id=1914197254]
 layout_mode = 0
-offset_left = 220.0
-offset_top = 113.0
-offset_right = 310.0
-offset_bottom = 136.0
-theme = SubResource("Theme_wrs1t")
-text = "MECH"
-horizontal_alignment = 2
-
-[node name="MaterialLbl3" type="Label" parent="." unique_id=149039083]
-layout_mode = 0
-offset_left = 88.0
-offset_top = 47.0
-offset_right = 310.0
-offset_bottom = 70.0
+offset_left = 147.0
+offset_top = 120.0
+offset_right = 309.0
+offset_bottom = 144.0
 theme = SubResource("Theme_wrs1t")
 text = "INTERSTELLAR"
-horizontal_alignment = 2
 
-[node name="MaterialLbl4" type="Label" parent="." unique_id=1111225013]
+[node name="FighterBtn" type="Button" parent="." unique_id=1722382058]
 layout_mode = 0
-offset_left = 219.0
-offset_top = 78.0
+offset_left = 211.0
+offset_top = 91.0
 offset_right = 309.0
-offset_bottom = 101.0
-theme = SubResource("Theme_wrs1t")
+offset_bottom = 115.0
+theme = SubResource("Theme_oemnd")
 text = "FIGHTER"
-horizontal_alignment = 2
 
-[node name="Ship" type="Label" parent="." unique_id=1620058987]
+[node name="MechBtn" type="Button" parent="." unique_id=2043133585]
 layout_mode = 0
-offset_left = 87.0
-offset_top = 17.0
-offset_right = 309.0
-offset_bottom = 40.0
-theme = SubResource("Theme_wrs1t")
-text = "SHIP"
-horizontal_alignment = 2
+offset_left = 248.0
+offset_top = 63.0
+offset_right = 308.0
+offset_bottom = 87.0
+theme = SubResource("Theme_0coba")
+text = "MECH"

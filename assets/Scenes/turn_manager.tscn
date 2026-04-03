@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://s5x664o8jd24"]
+
+[ext_resource type="Script" uid="uid://cwij5dk48jsw3" path="res://assets/Scripts/turn_manager.gd" id="1_gyp3s"]
+[ext_resource type="Resource" uid="uid://bpmv5ul6csfsk" path="res://assets/Data/Systems/SolarSystem.tres" id="2_in7kn"]
+
+[node name="TurnManager" type="Node2D" unique_id=942705599]
+script = ExtResource("1_gyp3s")
+starting_system = ExtResource("2_in7kn")

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://cedpsuk3kqgqe"]
+
+[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://assets/Scripts/planet_data.gd" id="1_wvhru"]
+[ext_resource type="Texture2D" uid="uid://brvhok0t2vhpg" path="res://assets/Sprites/Uranus-Sheet.png" id="2_ea28v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hvcf"]
+atlas = ExtResource("2_ea28v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dfn7"]
+atlas = ExtResource("2_ea28v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qrvd"]
+atlas = ExtResource("2_ea28v")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr30j"]
+atlas = ExtResource("2_ea28v")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ye835"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_4hvcf")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_1dfn7")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_7qrvd")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_yr30j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_wvhru")
+planet_name = "URANUS"
+sprite_frames = SubResource("SpriteFrames_ye835")
+metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

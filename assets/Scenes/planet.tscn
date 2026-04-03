@@ -23,6 +23,9 @@ animations = [{
 [sub_resource type="Theme" id="Theme_vqolr"]
 default_font = ExtResource("4_spoox")
 
+[sub_resource type="Theme" id="Theme_spoox"]
+default_font = ExtResource("4_spoox")
+
 [node name="Planet" type="Area2D" unique_id=444415671 groups=["planet"]]
 z_index = 5
 collision_layer = 2
@@ -58,3 +61,13 @@ offset_right = 136.0
 offset_bottom = 12.0
 theme = SubResource("Theme_vqolr")
 text = "COLLONISE"
+
+[node name="AttackMenu" type="Node2D" parent="." unique_id=1880261596]
+
+[node name="Attack" type="Button" parent="AttackMenu" unique_id=1052383191]
+offset_left = 12.0
+offset_top = -12.0
+offset_right = 97.0
+offset_bottom = 12.0
+theme = SubResource("Theme_spoox")
+text = "ATTACK"
