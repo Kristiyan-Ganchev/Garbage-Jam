@@ -34,7 +34,6 @@ func _process(delta: float) -> void:
 	pass
 
 func collonise()-> void:
-	print("hello")
 	if(MatManager.interstellars >= system_info.needed_ships):
 		TurnManager.add_system(self.system_info)
 		MatManager.interstellars -= system_info.needed_ships

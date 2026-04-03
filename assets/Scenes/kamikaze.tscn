@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c8ym43wiqe8at"]
+
+[ext_resource type="Texture2D" uid="uid://cbg3adgik1y20" path="res://assets/Sprites/Sol-Sheet.png" id="1_7udhy"]
+[ext_resource type="Script" uid="uid://bygnxx2w5nv" path="res://assets/Scripts/kamikaze.gd" id="1_ftrnt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftrnt"]
+atlas = ExtResource("1_7udhy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkyb1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftrnt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_knv1m"]
+radius = 9.0
+
+[node name="Kamikaze" type="CharacterBody2D" unique_id=1326534368]
+collision_layer = 16
+motion_mode = 1
+script = ExtResource("1_ftrnt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=435129045]
+sprite_frames = SubResource("SpriteFrames_dkyb1")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1758251364]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=143793604]
+scale = Vector2(1.1, 1.1)
+shape = SubResource("CircleShape2D_knv1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2115586812]
+shape = SubResource("CircleShape2D_knv1m")

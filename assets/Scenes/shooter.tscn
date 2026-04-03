@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bwlvb5lh3byv7"]
+
+[ext_resource type="Script" uid="uid://bho4at1yg4nhf" path="res://assets/Scenes/shooter.gd" id="1_vudjx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fralr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fralr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vudjx"]
+
+[node name="Shooter" type="CharacterBody2D" unique_id=1807736615]
+collision_layer = 16
+collision_mask = 16
+motion_mode = 1
+script = ExtResource("1_vudjx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=485272156]
+sprite_frames = SubResource("SpriteFrames_fralr")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1783625905]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=472611040]
+shape = SubResource("CircleShape2D_fralr")
+debug_color = Color(0.89788806, 0.0012685341, 0.21060356, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=182675110]
+scale = Vector2(1.1, 1.1)
+shape = SubResource("CircleShape2D_vudjx")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=32070728]

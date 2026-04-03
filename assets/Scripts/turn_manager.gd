@@ -46,6 +46,11 @@ func go_to_galaxy_map() -> void:
 	UiManager.wipe_ui()
 	get_tree().change_scene_to_file("res://scenes/galaxy_map.tscn")
 	
+func go_to_schmup() -> void:
+	state = GameEnums.States.SHMUP
+	UiManager.wipe_ui()
+	get_tree().change_scene_to_file("res://scenes/schmup.tscn")
+	
 func add_system(system: SystemData) -> void:
 	if(reached_systems.has(system.system_name)):
 		system = reached_systems[system.system_name]

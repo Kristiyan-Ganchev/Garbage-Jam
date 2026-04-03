@@ -129,6 +129,7 @@ func attack_press() -> void:
 	if(TurnManager.currentElement !=self):
 		return
 	attack_menu.visible = false
+	TurnManager.go_to_schmup()
 func wipe_planet_ui() -> void:
 	collonise_menu.visible = false
 	menu.visible = false

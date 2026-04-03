@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cviasjjmo0a1l"]
+
+[ext_resource type="Script" uid="uid://dcvca1u2uyt00" path="res://assets/Scripts/enemy_bullet.gd" id="1_u68ck"]
+[ext_resource type="Texture2D" uid="uid://ch8earth3t1uy" path="res://assets/Sprites/bullet.png" id="2_cbmvk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_orj1d"]
+radius = 2.0
+height = 6.0
+
+[node name="EnemyBullet" type="Area2D" unique_id=1951329138]
+script = ExtResource("1_u68ck")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1072334762]
+texture = ExtResource("2_cbmvk")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1159205975]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=940647066]
+shape = SubResource("CapsuleShape2D_orj1d")

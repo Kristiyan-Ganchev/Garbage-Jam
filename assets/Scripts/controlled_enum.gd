@@ -27,5 +27,6 @@ enum UIs {
 enum States {
 	Galaxy,
 	System,
-	Planet
+	Planet,
+	SHMUP
 }

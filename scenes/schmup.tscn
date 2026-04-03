@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bkc03ws3qbotv"]
+
+[ext_resource type="PackedScene" uid="uid://0lnyo8l6ceo2" path="res://assets/Scenes/player.tscn" id="1_4a4k0"]
+[ext_resource type="PackedScene" uid="uid://21wvdobgs68a" path="res://scenes/level.tscn" id="2_jbow1"]
+
+[node name="Schmup" type="Node2D" unique_id=1530138245]
+
+[node name="Player" parent="." unique_id=1096022753 instance=ExtResource("1_4a4k0")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=471883417]
+
+[node name="Level" parent="." unique_id=906371633 instance=ExtResource("2_jbow1")]
