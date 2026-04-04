@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coavo411rjf1e"
-path="res://.godot/imported/Jupiter-Sheet.png-a5ba68ff2038217e74160243fd9d85b7.ctex"
+uid="uid://d3pjkrxhrtucd"
+path="res://.godot/imported/shooter-attack-Sheet.png-71ef6f1405e0817da56b4aee87be1475.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Jupiter-Sheet.png"
-dest_files=["res://.godot/imported/Jupiter-Sheet.png-a5ba68ff2038217e74160243fd9d85b7.ctex"]
+source_file="res://assets/Sprites/Enemies/shooter-attack-Sheet.png"
+dest_files=["res://.godot/imported/shooter-attack-Sheet.png-71ef6f1405e0817da56b4aee87be1475.ctex"]
 
 [params]
 

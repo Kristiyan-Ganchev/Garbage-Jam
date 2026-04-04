@@ -4,6 +4,8 @@ var direction = Vector2(0,-1)
 @export var speed: float = 10.0
 @export var damage = 1
 func _ready() -> void:
+	var notifier = $VisibleOnScreenNotifier2D
+	notifier.screen_exited.connect(_on_visible_on_screen_notifier_2d_screen_exited)
 	body_entered.connect(hit)
 
 

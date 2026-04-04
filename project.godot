@@ -36,6 +36,7 @@ window/stretch/scale_mode="integer"
 [global_group]
 
 planet=""
+player=""
 
 [input]
 
@@ -81,6 +82,7 @@ shoot={
 
 [layer_names]
 
+2d_physics/layer_1="Player"
 2d_physics/layer_2="Planets"
 2d_physics/layer_5="Enemies"
 

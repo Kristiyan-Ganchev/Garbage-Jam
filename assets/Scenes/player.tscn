@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0lnyo8l6ceo2"]
 
 [ext_resource type="Script" uid="uid://borr4y1pbvfy5" path="res://assets/Scripts/fighter_controller.gd" id="1_qrc4i"]
-[ext_resource type="Texture2D" uid="uid://cjmr7qea0fknb" path="res://assets/Sprites/fighter-Sheet.png" id="2_qrc4i"]
+[ext_resource type="Texture2D" uid="uid://cjmr7qea0fknb" path="res://assets/Sprites/Player/fighter-Sheet.png" id="2_qrc4i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0o5ai"]
 atlas = ExtResource("2_qrc4i")
@@ -56,10 +56,8 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dtlon"]
 
-[node name="Player" type="CharacterBody2D" unique_id=754184571]
+[node name="Player" type="CharacterBody2D" unique_id=754184571 groups=["player"]]
 script = ExtResource("1_qrc4i")
-move_speed = 150
-bullet_speed = 700
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=375106583]
 scale = Vector2(1, 1.232)

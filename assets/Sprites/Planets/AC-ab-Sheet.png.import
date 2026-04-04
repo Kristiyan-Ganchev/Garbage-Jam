@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dysl5edjc1a75"
-path="res://.godot/imported/Terra-Sheet.png-07d08b8a01534ce9645867113a03b173.ctex"
+uid="uid://dqwu8anf8x3c4"
+path="res://.godot/imported/AC-ab-Sheet.png-1b5efdb93a9072918c7c02c3f572760b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Terra-Sheet.png"
-dest_files=["res://.godot/imported/Terra-Sheet.png-07d08b8a01534ce9645867113a03b173.ctex"]
+source_file="res://assets/Sprites/Planets/AC-ab-Sheet.png"
+dest_files=["res://.godot/imported/AC-ab-Sheet.png-1b5efdb93a9072918c7c02c3f572760b.ctex"]
 
 [params]
 

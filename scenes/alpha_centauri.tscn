@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ul03ib0mp4wr"]
 
 [ext_resource type="Script" uid="uid://c6tr167b6uk57" path="res://scenes/reloader.gd" id="1_woxff"]
-[ext_resource type="Texture2D" uid="uid://pbcbyjckq2p7" path="res://assets/Sprites/Space-Background.png" id="3_c70a3"]
+[ext_resource type="Texture2D" uid="uid://pbcbyjckq2p7" path="res://assets/Sprites/Planets/Space-Background.png" id="3_c70a3"]
 [ext_resource type="PackedScene" uid="uid://dk5jhnxyrmepy" path="res://assets/Scenes/planet.tscn" id="4_fju4r"]
 [ext_resource type="Resource" uid="uid://cttss4ep5sopv" path="res://assets/Data/Planets/Proxima-b.tres" id="5_lc84g"]
 [ext_resource type="Resource" uid="uid://vyrsh35mp7gy" path="res://assets/Data/Planets/Proxima-d.tres" id="6_woxff"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpst2bw7g4hsl"
-path="res://.godot/imported/Proxima-d-Sheet.png-b267bf60acbdd6d72cc5b1510a836d9e.ctex"
+uid="uid://ccis62803ebdj"
+path="res://.godot/imported/Galaxy-Background.png-ad9e7264d041637c61c343923124406a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Proxima-d-Sheet.png"
-dest_files=["res://.godot/imported/Proxima-d-Sheet.png-b267bf60acbdd6d72cc5b1510a836d9e.ctex"]
+source_file="res://assets/Sprites/Systems/Galaxy-Background.png"
+dest_files=["res://.godot/imported/Galaxy-Background.png-ad9e7264d041637c61c343923124406a.ctex"]
 
 [params]
 

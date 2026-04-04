@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c8ym43wiqe8at" path="res://assets/Scenes/kamikaze.tscn" id="1_2q6dc"]
 [ext_resource type="PackedScene" uid="uid://bwlvb5lh3byv7" path="res://assets/Scenes/shooter.tscn" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://csnop05ble784" path="res://assets/Scenes/complete_shmup.tscn" id="3_w8frs"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rd3vj"]
 
@@ -35,11 +36,14 @@ shape = SubResource("WorldBoundaryShape2D_w7c3h")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=221452190]
 
-[node name="Enemy" parent="." unique_id=1083996718 instance=ExtResource("1_2q6dc")]
-position = Vector2(0, -71)
+[node name="Kamikaze" parent="." unique_id=1083996718 instance=ExtResource("1_2q6dc")]
+position = Vector2(-64, -101)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1808171671]
 tile_map_data = PackedByteArray("AAD5////AAABAAEAAAD5//7/AAABAAEAAAD6//7/AAABAAEAAAD6//3/AAABAAEAAAD7//3/AAABAAEAAAD8//z/AAABAAEAAAD9//z/AAABAAEAAAD9//v/AAABAAEAAAD+//v/AAABAAEAAAD+//r/AAAAAAAAAAD+//n/AAABAAEAAAD///n/AAAAAAAAAAD///j/AAABAAEAAAAAAPj/AAAAAAAAAAAAAPf/AAABAAEAAAABAPf/AAAAAAAAAAD+//j/AAABAAEAAAD9//n/AAABAAEAAAD9//r/AAABAAEAAAD8//r/AAABAAEAAAD8//v/AAABAAEAAAD7//v/AAABAAEAAAD6//v/AAABAAEAAAD6//z/AAABAAEAAAD5//z/AAABAAEAAAD5//3/AAABAAEAAAD5//v/AAABAAEAAAD6//r/AAABAAEAAAD6//n/AAAAAAAAAAD6//j/AAAAAAAAAAD7//j/AAAAAAAAAAD8//j/AAABAAEAAAD9//f/AAABAAEAAAD+//f/AAAAAAAAAAD9//j/AAABAAEAAAD8//n/AAABAAEAAAD7//n/AAABAAEAAAD7//r/AAABAAEAAAD///f/AAABAAEAAAD///b/AAABAAEAAAD9//b/AAABAAEAAAD+//b/AAABAAEAAAD8//b/AAAAAAAAAAD7//b/AAABAAEAAAD7//f/AAAAAAAAAAD6//f/AAABAAEAAAD5//j/AAABAAEAAAD5//n/AAAAAAAAAAD4//n/AAABAAEAAAD4//j/AAABAAEAAAD5//f/AAABAAEAAAD5//b/AAAAAAAAAAD5//r/AAAAAAAAAAD6//b/AAABAAEAAAD8//X/AAABAAEAAAD7//X/AAABAAEAAAD9//X/AAABAAEAAAD+//X/AAABAAEAAAD///X/AAABAAEAAAD8//f/AAABAAEAAAD4//v/AAAAAAAAAAD4//r/AAAAAAAAAAD7////AAABAAEAAAD7//7/AAABAAEAAAD8//7/AAABAAEAAAD8//3/AAABAAEAAAD7//z/AAABAAEAAAD4////AAABAAEAAAD3/wAAAAABAAEAAAD4/wAAAAABAAEAAAAAAPb/AAABAAEAAAABAPb/AAABAAEAAAABAPX/AAABAAEAAAAAAPX/AAABAAEAAAABAPT/AAABAAEAAAD4//z/AAABAAEAAAD3//3/AAABAAEAAAD2//7/AAABAAEAAAD1////AAABAAEAAAD0////AAABAAEAAAD1//7/AAABAAEAAAD///T/AAABAAEAAAD4//7/AAABAAEAAAD3////AAABAAEAAAD///P/AAABAAEAAAD+//T/AAABAAEAAAD3//r/AAABAAEAAAD2//v/AAABAAEAAAD1//z/AAABAAEAAAD1//3/AAABAAEAAAD0//3/AAABAAEAAAD1//v/AAABAAEAAAD2//r/AAABAAEAAAD3//n/AAABAAEAAAA=")
 
 [node name="Shooter" parent="." unique_id=1807736615 instance=ExtResource("2_w7c3h")]
-position = Vector2(55, -16)
+position = Vector2(48, -23)
+
+[node name="CompleteShmup" parent="." unique_id=2100926780 instance=ExtResource("3_w8frs")]
+position = Vector2(-2, -113)

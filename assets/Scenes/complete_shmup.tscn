@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://csnop05ble784"]
+
+[ext_resource type="Script" uid="uid://dn3tjcl1h1k47" path="res://assets/Scenes/complete_shmup.gd" id="1_p6fhx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6fhx"]
+
+[node name="CompleteShmup" type="Node2D" unique_id=2100926780]
+script = ExtResource("1_p6fhx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1486520762]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=239138503]
+scale = Vector2(15, 5)
+shape = SubResource("RectangleShape2D_p6fhx")

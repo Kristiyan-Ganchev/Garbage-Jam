@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://cg5pn5cyl36ii"]
 
 [ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://assets/Scripts/planet_data.gd" id="1_qmltn"]
-[ext_resource type="Texture2D" uid="uid://dqwu8anf8x3c4" path="res://assets/Sprites/AC-ab-Sheet.png" id="2_omoik"]
+[ext_resource type="Texture2D" uid="uid://dqwu8anf8x3c4" path="res://assets/Sprites/Planets/AC-ab-Sheet.png" id="2_omoik"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i04pg"]
 atlas = ExtResource("2_omoik")

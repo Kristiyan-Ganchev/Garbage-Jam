@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqwu8anf8x3c4"
-path="res://.godot/imported/AC-ab-Sheet.png-bd5c81f28215d58dccf72c5f5486b907.ctex"
+uid="uid://dfequ8qvwoo8d"
+path="res://.godot/imported/kamikaze_die-Sheet.png-29570ecbdbc0b50f46e7a66445870d15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/AC-ab-Sheet.png"
-dest_files=["res://.godot/imported/AC-ab-Sheet.png-bd5c81f28215d58dccf72c5f5486b907.ctex"]
+source_file="res://assets/Sprites/Enemies/kamikaze_die-Sheet.png"
+dest_files=["res://.godot/imported/kamikaze_die-Sheet.png-29570ecbdbc0b50f46e7a66445870d15.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjmr7qea0fknb"
-path="res://.godot/imported/fighter-Sheet.png-d19eedf2f19fc0205c89ccf4e7e05168.ctex"
+uid="uid://bu2cqqxanc01t"
+path="res://.godot/imported/kamikaze_attack-Sheet.png-6c35be773f0599b3c156dd0605164f59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/fighter-Sheet.png"
-dest_files=["res://.godot/imported/fighter-Sheet.png-d19eedf2f19fc0205c89ccf4e7e05168.ctex"]
+source_file="res://assets/Sprites/Enemies/kamikaze_attack-Sheet.png"
+dest_files=["res://.godot/imported/kamikaze_attack-Sheet.png-6c35be773f0599b3c156dd0605164f59.ctex"]
 
 [params]
 

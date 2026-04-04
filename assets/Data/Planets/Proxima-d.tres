@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://vyrsh35mp7gy"]
 
 [ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://assets/Scripts/planet_data.gd" id="1_444ob"]
-[ext_resource type="Texture2D" uid="uid://cpst2bw7g4hsl" path="res://assets/Sprites/Proxima-d-Sheet.png" id="2_ke4o1"]
+[ext_resource type="Texture2D" uid="uid://cpst2bw7g4hsl" path="res://assets/Sprites/Planets/Proxima-d-Sheet.png" id="2_ke4o1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwm8o"]
 atlas = ExtResource("2_ke4o1")

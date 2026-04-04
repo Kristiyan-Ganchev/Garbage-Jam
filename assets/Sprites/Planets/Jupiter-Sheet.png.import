@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dixcdblw5wx8r"
-path="res://.godot/imported/AlphaCentauri-Sheet.png-bffb33c6b8e643780974a398878b1944.ctex"
+uid="uid://coavo411rjf1e"
+path="res://.godot/imported/Jupiter-Sheet.png-0c91469e2d7ea0d7f3978d3336eca8d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/AlphaCentauri-Sheet.png"
-dest_files=["res://.godot/imported/AlphaCentauri-Sheet.png-bffb33c6b8e643780974a398878b1944.ctex"]
+source_file="res://assets/Sprites/Planets/Jupiter-Sheet.png"
+dest_files=["res://.godot/imported/Jupiter-Sheet.png-0c91469e2d7ea0d7f3978d3336eca8d6.ctex"]
 
 [params]
 

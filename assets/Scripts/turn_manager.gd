@@ -7,7 +7,9 @@ var state: GameEnums.States = GameEnums.States.Galaxy
 @export var starting_system: SystemData
 var planet_dict: Dictionary[String,PlanetData] = { }
 var reached_systems: Dictionary [String,SystemData] ={ }
-# Called when the node enters the scene tree for the first time.
+var last_scene_path: String = ""
+var shmup_planet: PlanetData = null
+
 func _ready() -> void:
 	if starting_system !=null:
 		add_system(starting_system)
@@ -46,10 +48,23 @@ func go_to_galaxy_map() -> void:
 	UiManager.wipe_ui()
 	get_tree().change_scene_to_file("res://scenes/galaxy_map.tscn")
 	
-func go_to_schmup() -> void:
+func go_to_schmup(planet: PlanetData) -> void:
 	state = GameEnums.States.SHMUP
 	UiManager.wipe_ui()
+	shmup_planet = planet
+	last_scene_path = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file("res://scenes/schmup.tscn")
+	
+func finish_shmup() -> void:
+	state = GameEnums.States.System
+	UiManager.wipe_ui()
+	if shmup_planet:
+		shmup_planet.controlled_by = GameEnums.ControlledBy.NEUTRAL
+	if last_scene_path && last_scene_path != "":
+		UiManager.enable_ui(GameEnums.UIs.TURN)
+		get_tree().call_deferred("change_scene_to_file",last_scene_path)
+	else: 
+		call_deferred("go_to_galaxy_map")
 	
 func add_system(system: SystemData) -> void:
 	if(reached_systems.has(system.system_name)):

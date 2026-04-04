@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ul03ib0mp4wr" path="res://scenes/alpha_centauri.tscn" id="1_fe2xt"]
 [ext_resource type="Script" uid="uid://bq70yaio5j201" path="res://assets/Scripts/system_data.gd" id="1_w0fmg"]
-[ext_resource type="Texture2D" uid="uid://dixcdblw5wx8r" path="res://assets/Sprites/AlphaCentauri-Sheet.png" id="2_s4iw4"]
+[ext_resource type="Texture2D" uid="uid://dixcdblw5wx8r" path="res://assets/Sprites/Systems/AlphaCentauri-Sheet.png" id="2_s4iw4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fe2xt"]
 atlas = ExtResource("2_s4iw4")

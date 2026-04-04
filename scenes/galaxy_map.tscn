@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bo7v1gu06wb3f"]
 
-[ext_resource type="Texture2D" uid="uid://ccis62803ebdj" path="res://assets/Sprites/Galaxy-Background.png" id="1_4dj1w"]
+[ext_resource type="Texture2D" uid="uid://ccis62803ebdj" path="res://assets/Sprites/Systems/Galaxy-Background.png" id="1_4dj1w"]
 [ext_resource type="PackedScene" uid="uid://du78lgeqopsum" path="res://assets/Scenes/system.tscn" id="2_b8q3g"]
 [ext_resource type="Resource" uid="uid://bpmv5ul6csfsk" path="res://assets/Data/Systems/SolarSystem.tres" id="3_jkcgg"]
 [ext_resource type="Resource" uid="uid://0lkm5t0csgle" path="res://assets/Data/Systems/AlphaCentauri.tres" id="4_jkcgg"]

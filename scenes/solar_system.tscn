@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dcr5mvpfwfgck"]
 
 [ext_resource type="Script" uid="uid://c6tr167b6uk57" path="res://scenes/reloader.gd" id="1_2yas3"]
-[ext_resource type="Texture2D" uid="uid://pbcbyjckq2p7" path="res://assets/Sprites/Space-Background.png" id="3_vk2cv"]
+[ext_resource type="Texture2D" uid="uid://pbcbyjckq2p7" path="res://assets/Sprites/Planets/Space-Background.png" id="3_vk2cv"]
 [ext_resource type="PackedScene" uid="uid://dk5jhnxyrmepy" path="res://assets/Scenes/planet.tscn" id="4_ol65s"]
 [ext_resource type="Resource" uid="uid://c1w5d41n3vdf5" path="res://assets/Data/Planets/Sol.tres" id="5_8ogpx"]
 [ext_resource type="Resource" uid="uid://dew1f88dqaekt" path="res://assets/Data/Planets/Jupiter.tres" id="6_86ma8"]
