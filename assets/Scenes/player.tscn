@@ -1,23 +1,37 @@
 [gd_scene format=3 uid="uid://0lnyo8l6ceo2"]
 
 [ext_resource type="Script" uid="uid://borr4y1pbvfy5" path="res://assets/Scripts/fighter_controller.gd" id="1_qrc4i"]
+[ext_resource type="Shader" uid="uid://dmapfwq1lrmbr" path="res://assets/Shaders/hit_shader.gdshader" id="2_ay7pi"]
 [ext_resource type="Texture2D" uid="uid://cjmr7qea0fknb" path="res://assets/Sprites/Player/fighter-Sheet.png" id="2_qrc4i"]
+[ext_resource type="AudioStream" uid="uid://cpgwsw4ysb13d" path="res://assets/Data/Sounds/8bit_gunloop_explosion.wav" id="3_0o5ai"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tqdpq"]
+shader = ExtResource("2_ay7pi")
+shader_parameter/active = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0o5ai"]
 atlas = ExtResource("2_qrc4i")
 region = Rect2(0, 0, 31, 31)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qrc4i"]
-atlas = ExtResource("2_qrc4i")
-region = Rect2(31, 0, 31, 31)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ay7pi"]
 atlas = ExtResource("2_qrc4i")
-region = Rect2(62, 0, 31, 31)
+region = Rect2(31, 0, 31, 31)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tqdpq"]
 atlas = ExtResource("2_qrc4i")
 region = Rect2(93, 0, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j0x3"]
+atlas = ExtResource("2_qrc4i")
+region = Rect2(62, 0, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thbht"]
+atlas = ExtResource("2_qrc4i")
+region = Rect2(124, 0, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrc4i"]
+atlas = ExtResource("2_qrc4i")
+region = Rect2(155, 0, 31, 31)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ay7pi"]
 animations = [{
@@ -31,38 +45,47 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qrc4i")
-}],
-"loop": true,
-"name": &"move",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ay7pi")
-}],
-"loop": true,
-"name": &"move_shoot",
-"speed": 5.0
 }, {
-"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tqdpq")
 }],
+"loop": false,
+"name": &"move_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j0x3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thbht")
+}],
+"loop": false,
+"name": &"move_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrc4i")
+}],
 "loop": true,
-"name": &"shoot",
+"name": &"move_y",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dtlon"]
 
 [node name="Player" type="CharacterBody2D" unique_id=754184571 groups=["player"]]
+z_index = 50
+collision_mask = 32897
 script = ExtResource("1_qrc4i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=375106583]
+material = SubResource("ShaderMaterial_tqdpq")
 scale = Vector2(1, 1.232)
 sprite_frames = SubResource("SpriteFrames_ay7pi")
-animation = &"shoot"
+animation = &"move_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=60802118]
 shape = SubResource("CapsuleShape2D_dtlon")
@@ -72,3 +95,6 @@ position = Vector2(-4, -11)
 
 [node name="RightMuzzle" type="Marker2D" parent="." unique_id=1058428567]
 position = Vector2(5, -11)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1436535811]
+stream = ExtResource("3_0o5ai")

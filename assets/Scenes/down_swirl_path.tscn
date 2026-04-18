@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://e4bra27ukt8"]
+
+[ext_resource type="PackedScene" uid="uid://b32gfty2e1f4e" path="res://assets/Scenes/follower.tscn" id="1_a726h"]
+[ext_resource type="Script" uid="uid://bwme0as5nd46c" path="res://assets/Scripts/path_follow.gd" id="1_ce11j"]
+
+[sub_resource type="Curve2D" id="Curve2D_ce11j"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0.7374208, -15.64771, -0.7374208, 15.64771, 15, 35, 0.17985873, -20.324036, -0.17985873, 20.324036, -15, 70, -0.17985873, -22.842058, 0.17985873, 22.842058, 15, 105, -0.35971746, -27.158669, 0.35971746, 27.158669, -15, 140, 0.7194349, -22.302483, -0.7194349, 22.302483, 15, 175, 0, -21.762907, 0, 21.762907, -15, 210, -0.5395762, -26.619091, 0.5395762, 26.619091, 15, 245, 0, 0, 0, 0, -15, 280)
+}
+point_count = 9
+
+[node name="Down_swirl_path" type="Node2D" unique_id=2049265501]
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1113573563]
+curve = SubResource("Curve2D_ce11j")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1914779300]
+rotation = 0.88805395
+loop = false
+script = ExtResource("1_ce11j")
+
+[node name="Follower" parent="Path2D/PathFollow2D" unique_id=681726335 instance=ExtResource("1_a726h")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1098704799]

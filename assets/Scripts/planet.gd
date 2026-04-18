@@ -16,11 +16,17 @@ static var current_menu: Node2D = null
 @onready var rsr_lbl = $MenuAnchor/planet_info_ui/RsrLabel
 
 @onready var build_pb = $BuildPB
+@onready var build_lbl = $BuildLbl
+@onready var resource_lbl = $ResourceLabel
+
+@onready var build_mech_legs_btn = get_node("/root/Ui/BuildUi/LegsBtn")
+@onready var build_mech_arms_btn = get_node("/root/Ui/BuildUi/ArmsBtn")
+@onready var build_mech_fin_btn = get_node("/root/Ui/BuildUi/FinBtn")
+
 
 @onready var build_ship_btn = get_node("/root/Ui/BuildUi/ShipBtn")
 @onready var build_interstellar_btn = get_node("/root/Ui/BuildUi/InterstellarBtn")
 @onready var build_fighter_btn = get_node("/root/Ui/BuildUi/FighterBtn")
-@onready var build_mech_btn = get_node("/root/Ui/BuildUi/MechBtn")
 @onready var build_btn = get_node("/root/Ui/BuildUi/Build")
 @onready var cancel_build_btn = get_node("/root/Ui/BuildUi/Cancel")
 
@@ -40,6 +46,9 @@ func _ready() -> void:
 	build_ship_btn.pressed.connect(build_target.bind(GameEnums.Builds.SHIP))
 	build_interstellar_btn.pressed.connect(build_target.bind(GameEnums.Builds.INTERSTELLAR))
 	build_fighter_btn.pressed.connect(build_target.bind(GameEnums.Builds.FIGHTER))
+	build_mech_legs_btn.pressed.connect(build_target.bind(GameEnums.Builds.LEGS))
+	build_mech_arms_btn.pressed.connect(build_target.bind(GameEnums.Builds.ARMS))
+	build_mech_fin_btn.pressed.connect(build_target.bind(GameEnums.Builds.V_FIN))
 	build_btn.pressed.connect(build_press)
 	cancel_build_btn.pressed.connect(build_cancel)
 	collonise_btn.pressed.connect(collonise_press)
@@ -58,11 +67,25 @@ func _ready() -> void:
 		$AnimatedSprite2D.play("default")
 		
 		$AnimatedSprite2D.set_instance_shader_parameter("active",false)
+		
+		if planet_info.controlled_by == GameEnums.ControlledBy.HUMAN:
+			match planet_info.mat_type:
+				GameEnums.Mats.MATS:
+					resource_lbl.text = "&"
+				GameEnums.Mats.HEAVY:
+					resource_lbl.text = "$"
+				GameEnums.Mats.SUNS:
+					resource_lbl.text = "%"
+				GameEnums.Mats.LICH:
+					resource_lbl.text = "^"
+		elif planet_info.controlled_by == GameEnums.ControlledBy.NEUTRAL:
+			resource_lbl.text = "}"+str(planet_info.needed_ships_to_colonise)
+		else: resource_lbl.text = ""
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	build_pb.value = planet_info.get_build_progress()
+	if planet_info.build == GameEnums.Builds.NONE:
+		build_lbl.text = ""
 	pass
 
 func display_menu() -> void:
@@ -87,6 +110,9 @@ func display_attack() ->void:
 	current_menu = attack_menu
 
 func handle_click() -> void:
+	if current_menu != null:
+		current_menu.visible = false
+		current_menu = null
 	TurnManager.currentElement = self
 	TurnManager.state = GameEnums.States.Planet
 	
@@ -109,13 +135,29 @@ func build_press() -> void:
 		return
 	planet_info.set_build(to_build)
 	to_build = GameEnums.Builds.NONE
+	match planet_info.build:
+				GameEnums.Builds.SHIP:
+					build_lbl.text = "}"
+				GameEnums.Builds.INTERSTELLAR:
+					build_lbl.text = "@"
+				GameEnums.Builds.FIGHTER:
+					build_lbl.text = "#"
+				GameEnums.Builds.LEGS:
+					build_lbl.text = "]"
+				GameEnums.Builds.ARMS:
+					build_lbl.text = "["
+				GameEnums.Builds.V_FIN:
+					build_lbl.text = "*"
+				GameEnums.Builds.NONE:
+					build_lbl.text = ""
 
 func build_cancel() -> void:
 	if(TurnManager.currentElement != self):
 		return
 	planet_info.cancel_build()
 	to_build = GameEnums.Builds.NONE
-
+	build_lbl.text = ""
+	
 func collonise_press() -> void:
 	if(TurnManager.currentElement != self):
 		return
@@ -124,9 +166,20 @@ func collonise_press() -> void:
 	MatManager.ships -= planet_info.needed_ships_to_colonise
 	planet_info.controlled_by = GameEnums.ControlledBy.HUMAN
 	collonise_menu.visible=false
+	match planet_info.mat_type:
+				GameEnums.Mats.MATS:
+					resource_lbl.text = "&"
+				GameEnums.Mats.HEAVY:
+					resource_lbl.text = "$"
+				GameEnums.Mats.SUNS:
+					resource_lbl.text = "%"
+				GameEnums.Mats.LICH:
+					resource_lbl.text = "^"
 
 func attack_press() -> void:
 	if(TurnManager.currentElement !=self):
+		return
+	if(MatManager.fighters <= 0):
 		return
 	attack_menu.visible = false
 	TurnManager.go_to_schmup(planet_info)

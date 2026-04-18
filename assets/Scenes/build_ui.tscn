@@ -20,6 +20,12 @@ default_font = ExtResource("1_jrvbq")
 [sub_resource type="Theme" id="Theme_0coba"]
 default_font = ExtResource("1_jrvbq")
 
+[sub_resource type="Theme" id="Theme_6eceg"]
+default_font = ExtResource("1_jrvbq")
+
+[sub_resource type="Theme" id="Theme_jpcd4"]
+default_font = ExtResource("1_jrvbq")
+
 [node name="BuildUi" type="Control" unique_id=1152488168]
 layout_mode = 3
 anchors_preset = 15
@@ -30,7 +36,7 @@ grow_vertical = 2
 
 [node name="Build" type="Button" parent="." unique_id=1583647672]
 layout_mode = 0
-offset_left = 239.0
+offset_left = 225.0
 offset_top = 204.0
 offset_right = 311.0
 offset_bottom = 228.0
@@ -48,36 +54,58 @@ text = "CANCEL"
 
 [node name="ShipBtn" type="Button" parent="." unique_id=123346319]
 layout_mode = 0
-offset_left = 249.0
+offset_left = 250.0
 offset_top = 147.0
-offset_right = 309.0
+offset_right = 310.0
 offset_bottom = 171.0
 theme = SubResource("Theme_jrvbq")
-text = "SHIP"
+text = "}/3&"
 
 [node name="InterstellarBtn" type="Button" parent="." unique_id=1914197254]
 layout_mode = 0
-offset_left = 147.0
+offset_left = 225.0
 offset_top = 120.0
-offset_right = 309.0
+offset_right = 310.0
 offset_bottom = 144.0
 theme = SubResource("Theme_wrs1t")
-text = "INTERSTELLAR"
+text = "@/5&2$"
 
 [node name="FighterBtn" type="Button" parent="." unique_id=1722382058]
 layout_mode = 0
-offset_left = 211.0
-offset_top = 91.0
+offset_left = 249.0
+offset_top = 92.0
 offset_right = 309.0
-offset_bottom = 115.0
+offset_bottom = 116.0
 theme = SubResource("Theme_oemnd")
-text = "FIGHTER"
+text = "#/3&
+"
 
-[node name="MechBtn" type="Button" parent="." unique_id=2043133585]
+[node name="LegsBtn" type="Button" parent="." unique_id=2043133585]
 layout_mode = 0
-offset_left = 248.0
-offset_top = 63.0
-offset_right = 308.0
-offset_bottom = 87.0
+offset_left = 133.0
+offset_top = 188.0
+offset_right = 218.0
+offset_bottom = 228.0
 theme = SubResource("Theme_0coba")
-text = "MECH"
+text = "]/
+20&10$"
+
+[node name="ArmsBtn" type="Button" parent="." unique_id=2106315893]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 188.0
+offset_right = 128.0
+offset_bottom = 228.0
+theme = SubResource("Theme_6eceg")
+text = "[/
+30&20$5%"
+
+[node name="FinBtn" type="Button" parent="." unique_id=1311501458]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 144.0
+offset_right = 159.0
+offset_bottom = 184.0
+theme = SubResource("Theme_jpcd4")
+text = "*/
+30&20$5%3^"

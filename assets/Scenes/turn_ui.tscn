@@ -2,6 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://cwvynjg11d8vk" path="res://assets/Sprites/font.png" id="1_a4q53"]
 [ext_resource type="Script" uid="uid://ddsuspy50vy4u" path="res://assets/Scripts/ui.gd" id="1_dxoq3"]
+[ext_resource type="Shader" uid="uid://dur6nykl2j5do" path="res://assets/Shaders/planet_outline.gdshader" id="3_5uumt"]
+[ext_resource type="Script" uid="uid://ccvjqe8e55udj" path="res://assets/Scenes/mech_hit_box.gd" id="3_qvi25"]
+[ext_resource type="Texture2D" uid="uid://i6uxlmpmbtwl" path="res://assets/Sprites/mech-symbol-Sheet.png" id="3_xoeno"]
 
 [sub_resource type="Theme" id="Theme_dxoq3"]
 default_font = ExtResource("1_a4q53")
@@ -20,6 +23,191 @@ default_font = ExtResource("1_a4q53")
 
 [sub_resource type="Theme" id="Theme_nprlw"]
 default_font = ExtResource("1_a4q53")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qvi25"]
+shader = ExtResource("3_5uumt")
+shader_parameter/outline_color = Color(0.88954026, 0.8386773, 0, 1)
+shader_parameter/corner_pixel = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoeno"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emcal"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6u8o"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18ids"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm46h"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puveu"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ldlq"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejdwp"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uumt"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvi25"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nprlw"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kw6ol"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1q24"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htunh"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j458t"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(832, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glwrw"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(896, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaj8u"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(960, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5bqe"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(1024, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfi5y"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(1088, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d64eg"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(1152, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2x2d"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(1216, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_377je"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(1280, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cg4d8"]
+atlas = ExtResource("3_xoeno")
+region = Rect2(1344, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emcal"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xoeno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emcal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6u8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18ids")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wm46h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puveu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ldlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejdwp")
+}],
+"loop": false,
+"name": &"build",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uumt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvi25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nprlw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw6ol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1q24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htunh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j458t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glwrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaj8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5bqe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfi5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d64eg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2x2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_377je")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cg4d8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw6ol")
+}],
+"loop": false,
+"name": &"eyecatch",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5uumt"]
+radius = 19.0
 
 [node name="TurnUi" type="Control" unique_id=1357631792]
 layout_mode = 3
@@ -41,22 +229,22 @@ text = "END"
 
 [node name="PopLbl" type="Label" parent="." unique_id=1288767387]
 layout_mode = 0
-offset_left = 4.0
+offset_left = 24.0
 offset_top = 214.0
-offset_right = 137.0
+offset_right = 161.0
 offset_bottom = 237.0
 theme = SubResource("Theme_a4q53")
-text = "POPULATION"
-horizontal_alignment = 2
+text = "{ 0"
 
 [node name="TurnLbl" type="Label" parent="." unique_id=826729704]
 layout_mode = 0
-offset_left = 178.0
+offset_left = 106.0
 offset_top = 213.0
-offset_right = 230.0
+offset_right = 262.0
 offset_bottom = 236.0
 theme = SubResource("Theme_a4q53")
-text = "TURN"
+text = "TURN 0"
+horizontal_alignment = 2
 
 [node name="Exit" type="Button" parent="." unique_id=454328052]
 layout_mode = 0
@@ -69,69 +257,92 @@ text = "BACK"
 
 [node name="MatsLbl" type="Label" parent="." unique_id=1572384923]
 layout_mode = 0
-offset_left = 192.0
-offset_top = 155.0
-offset_right = 316.0
-offset_bottom = 178.0
+offset_left = 193.0
+offset_top = 160.0
+offset_right = 317.0
+offset_bottom = 183.0
 theme = SubResource("Theme_5uumt")
-text = "MATS 0"
+text = "& 0"
 horizontal_alignment = 2
 
 [node name="HeavyLbl" type="Label" parent="." unique_id=1510766896]
 layout_mode = 0
-offset_left = 226.0
-offset_top = 137.0
-offset_right = 316.0
-offset_bottom = 160.0
+offset_left = 170.0
+offset_top = 145.0
+offset_right = 317.0
+offset_bottom = 168.0
 theme = SubResource("Theme_5uumt")
-text = "HEAVY 0"
+text = "$ 0"
 horizontal_alignment = 2
 
 [node name="SunsLbl" type="Label" parent="." unique_id=730477045]
 layout_mode = 0
 offset_left = 95.0
-offset_top = 105.0
+offset_top = 115.0
 offset_right = 317.0
-offset_bottom = 128.0
+offset_bottom = 138.0
 theme = SubResource("Theme_5uumt")
-text = "LICHIUM 0"
+text = "^ 0"
 horizontal_alignment = 2
 
 [node name="LichLbl" type="Label" parent="." unique_id=600926992]
 layout_mode = 0
-offset_left = 239.0
-offset_top = 120.0
-offset_right = 316.0
-offset_bottom = 143.0
+offset_left = 136.0
+offset_top = 130.0
+offset_right = 317.0
+offset_bottom = 153.0
 theme = SubResource("Theme_5uumt")
-text = "SUNS 0"
+text = "% 0"
 horizontal_alignment = 2
 
 [node name="Ships" type="Label" parent="." unique_id=938597525]
 layout_mode = 0
 offset_left = 95.0
-offset_top = 90.0
+offset_top = 100.0
 offset_right = 317.0
-offset_bottom = 113.0
+offset_bottom = 123.0
 theme = SubResource("Theme_5uumt")
-text = "SHIPS 0"
+text = "} 0"
 horizontal_alignment = 2
 
 [node name="InterstellarLbl" type="Label" parent="." unique_id=756638804]
 layout_mode = 0
 offset_left = 125.0
-offset_top = 76.0
+offset_top = 85.0
 offset_right = 317.0
-offset_bottom = 99.0
+offset_bottom = 108.0
 theme = SubResource("Theme_qvi25")
-text = "INTERSTELLARS 0"
+text = "@ 0"
 horizontal_alignment = 2
 
 [node name="FightersLbl" type="Label" parent="." unique_id=401069120]
 layout_mode = 0
-offset_left = 189.0
-offset_top = 60.0
+offset_left = 191.0
+offset_top = 70.0
 offset_right = 317.0
-offset_bottom = 83.0
+offset_bottom = 93.0
 theme = SubResource("Theme_nprlw")
-text = "FIGHTERS 0"
+text = "# 0"
+horizontal_alignment = 2
+
+[node name="MechHitBox" type="Area2D" parent="." unique_id=1310439500]
+script = ExtResource("3_qvi25")
+
+[node name="Mech" type="AnimatedSprite2D" parent="MechHitBox" unique_id=1122266998]
+material = SubResource("ShaderMaterial_qvi25")
+position = Vector2(287, 33)
+sprite_frames = SubResource("SpriteFrames_emcal")
+animation = &"eyecatch"
+
+[node name="Launch" type="Button" parent="MechHitBox/Mech" unique_id=2039888982]
+modulate = Color(1, 1, 1, 0)
+offset_left = -13.0
+offset_top = -14.0
+offset_right = -4.0
+offset_bottom = -5.0
+scale = Vector2(3, 3)
+icon_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MechHitBox" unique_id=292946764]
+position = Vector2(287, 33)
+shape = SubResource("CircleShape2D_5uumt")

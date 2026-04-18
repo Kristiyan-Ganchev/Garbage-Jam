@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d2td7luaag807"]
+
+[ext_resource type="Script" uid="uid://djq805qhslpmf" path="res://assets/Scripts/spawner.gd" id="1_40wty"]
+
+[node name="Spawner" type="Node2D" unique_id=1267584809]
+script = ExtResource("1_40wty")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=297139003]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1087736505]

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://b61cibdlqqfad"]
+
+[ext_resource type="FontFile" uid="uid://cwvynjg11d8vk" path="res://assets/Sprites/font.png" id="1_dsy7g"]
+[ext_resource type="Script" uid="uid://jrewh2x2xe42" path="res://scenes/shmup_ui.gd" id="1_uy116"]
+[ext_resource type="Texture2D" uid="uid://cdb6kex81hbv5" path="res://assets/Sprites/Player/hp-bar-Sheet.png" id="2_8e7g0"]
+
+[sub_resource type="Theme" id="Theme_8e7g0"]
+default_font = ExtResource("1_dsy7g")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_886f4"]
+atlas = ExtResource("2_8e7g0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxhp8"]
+atlas = ExtResource("2_8e7g0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_147y1"]
+atlas = ExtResource("2_8e7g0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy116"]
+atlas = ExtResource("2_8e7g0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7l4p0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_886f4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxhp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_147y1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy116")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ShmupUi" type="Control" unique_id=703641133]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uy116")
+
+[node name="LivesLbl" type="Label" parent="." unique_id=991165422]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 207.0
+offset_right = 118.0
+offset_bottom = 230.0
+theme = SubResource("Theme_8e7g0")
+text = "X3"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1173960197]
+position = Vector2(44, 210)
+scale = Vector2(2.25, 2.125)
+sprite_frames = SubResource("SpriteFrames_7l4p0")

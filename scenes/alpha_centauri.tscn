@@ -16,13 +16,13 @@ texture = ExtResource("3_c70a3")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=60475177]
 
 [node name="P-b" parent="." unique_id=444415671 instance=ExtResource("4_fju4r")]
-position = Vector2(-45, 59)
+position = Vector2(-86, 60)
 planet_info = ExtResource("5_lc84g")
 
 [node name="P-d" parent="." unique_id=1097900098 instance=ExtResource("4_fju4r")]
-position = Vector2(-129, -35)
+position = Vector2(-126, -12)
 planet_info = ExtResource("6_woxff")
 
 [node name="AC-AB" parent="." unique_id=740528468 instance=ExtResource("4_fju4r")]
-position = Vector2(50, -17)
+position = Vector2(0, -62)
 planet_info = ExtResource("7_c70a3")

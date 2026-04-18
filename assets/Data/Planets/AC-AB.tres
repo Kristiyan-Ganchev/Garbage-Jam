@@ -44,5 +44,6 @@ script = ExtResource("1_qmltn")
 planet_name = "AC-AB"
 controlled_by = 1
 sprite_frames = SubResource("SpriteFrames_bopre")
-mat_type = 3
+mat_type = 1
+needed_ships_to_colonise = 3
 metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

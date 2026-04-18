@@ -14,6 +14,7 @@ func _ready() -> void:
 	if starting_system !=null:
 		add_system(starting_system)
 	process_planets()
+	AudioManager.play_music(load("res://assets/Data/Sounds/space.wav"))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -51,13 +52,26 @@ func go_to_galaxy_map() -> void:
 func go_to_schmup(planet: PlanetData) -> void:
 	state = GameEnums.States.SHMUP
 	UiManager.wipe_ui()
+	UiManager.enable_ui(GameEnums.UIs.SHMUP)
+	AudioManager.play_music(load("res://assets/Data/Sounds/shmup.wav"))
 	shmup_planet = planet
 	last_scene_path = get_tree().current_scene.scene_file_path
-	get_tree().change_scene_to_file("res://scenes/schmup.tscn")
+	match randi_range(1,3):
+		1:
+			get_tree().change_scene_to_file("res://scenes/schmup.tscn")
+		2:
+			get_tree().change_scene_to_file("res://scenes/shmup2.tscn")
+		3:
+			get_tree().change_scene_to_file("res://scenes/shmup3.tscn")
+		4:
+			get_tree().change_scene_to_file("res://scenes/scmup4.tscn")
+		_:
+			get_tree().change_scene_to_file("res://scenes/shmup2.tscn")
 	
 func finish_shmup() -> void:
 	state = GameEnums.States.System
 	UiManager.wipe_ui()
+	AudioManager.play_music(load("res://assets/Data/Sounds/space.wav"))
 	if shmup_planet:
 		shmup_planet.controlled_by = GameEnums.ControlledBy.NEUTRAL
 	if last_scene_path && last_scene_path != "":
@@ -65,7 +79,20 @@ func finish_shmup() -> void:
 		get_tree().call_deferred("change_scene_to_file",last_scene_path)
 	else: 
 		call_deferred("go_to_galaxy_map")
+
+func fail_shmup() -> void:
+	state = GameEnums.States.System
+	UiManager.wipe_ui()
+	AudioManager.play_music(load("res://assets/Data/Sounds/space.wav"))
+	if shmup_planet:
+		shmup_planet.controlled_by = GameEnums.ControlledBy.ALIEN
+	if last_scene_path && last_scene_path != "":
+		UiManager.enable_ui(GameEnums.UIs.TURN)
+		get_tree().call_deferred("change_scene_to_file",last_scene_path)
+	else: 
+		call_deferred("go_to_galaxy_map")
 	
+
 func add_system(system: SystemData) -> void:
 	if(reached_systems.has(system.system_name)):
 		system = reached_systems[system.system_name]

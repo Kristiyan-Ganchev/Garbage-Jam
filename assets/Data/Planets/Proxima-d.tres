@@ -45,4 +45,5 @@ planet_name = "PROXIMA-D"
 controlled_by = 1
 sprite_frames = SubResource("SpriteFrames_xyt6g")
 mat_type = 3
+needed_ships_to_colonise = 2
 metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

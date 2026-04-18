@@ -4,7 +4,7 @@ extends Node2D
 
 func _ready() -> void:
 	complete_area.body_entered.connect(complete_level)
-
+	pass
 
 func _process(delta: float) -> void:
 	pass

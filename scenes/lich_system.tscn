@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c6nxk8jmvhv5i"]
+
+[ext_resource type="Texture2D" uid="uid://pbcbyjckq2p7" path="res://assets/Sprites/Planets/Space-Background.png" id="1_u5sp0"]
+[ext_resource type="PackedScene" uid="uid://dk5jhnxyrmepy" path="res://assets/Scenes/planet.tscn" id="2_a7m42"]
+[ext_resource type="Resource" uid="uid://ca8j7156jpffi" path="res://assets/Data/Planets/Draugr.tres" id="3_fnuu1"]
+[ext_resource type="Resource" uid="uid://dt55sq0vpyspk" path="res://assets/Data/Planets/Phobetor.tres" id="4_a0jn8"]
+[ext_resource type="Resource" uid="uid://k88cm3ng4lgv" path="res://assets/Data/Planets/Poltergeist.tres" id="5_iyqoj"]
+
+[node name="LichSystem" type="Node2D" unique_id=436966875]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=966748106]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=818687118]
+texture = ExtResource("1_u5sp0")
+
+[node name="Planet" parent="." unique_id=444415671 instance=ExtResource("2_a7m42")]
+position = Vector2(-48, 69)
+planet_info = ExtResource("3_fnuu1")
+
+[node name="Planet2" parent="." unique_id=485514906 instance=ExtResource("2_a7m42")]
+position = Vector2(-22, -78)
+planet_info = ExtResource("4_a0jn8")
+
+[node name="Planet3" parent="." unique_id=232209948 instance=ExtResource("2_a7m42")]
+position = Vector2(-109, -4)
+planet_info = ExtResource("5_iyqoj")

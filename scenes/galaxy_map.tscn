@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://du78lgeqopsum" path="res://assets/Scenes/system.tscn" id="2_b8q3g"]
 [ext_resource type="Resource" uid="uid://bpmv5ul6csfsk" path="res://assets/Data/Systems/SolarSystem.tres" id="3_jkcgg"]
 [ext_resource type="Resource" uid="uid://0lkm5t0csgle" path="res://assets/Data/Systems/AlphaCentauri.tres" id="4_jkcgg"]
+[ext_resource type="Resource" uid="uid://cgmi7gli7d6xx" path="res://assets/Data/Systems/LichSystem.tres" id="5_hqjdj"]
 
 [node name="GalaxyMap" type="Node2D" unique_id=851310725]
 
@@ -19,3 +20,7 @@ system_info = ExtResource("3_jkcgg")
 [node name="AlphaCentauri" parent="." unique_id=1392103264 instance=ExtResource("2_b8q3g")]
 position = Vector2(28, 26)
 system_info = ExtResource("4_jkcgg")
+
+[node name="System" parent="." unique_id=1567093768 instance=ExtResource("2_b8q3g")]
+position = Vector2(48, -42)
+system_info = ExtResource("5_hqjdj")

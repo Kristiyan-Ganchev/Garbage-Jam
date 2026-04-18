@@ -16,12 +16,16 @@ enum Builds {
 	SHIP,
 	INTERSTELLAR,
 	FIGHTER,
-	NONE
+	NONE,
+	LEGS,
+	ARMS,
+	V_FIN
 }
 
 enum UIs {
 	BUILD,
-	TURN
+	TURN,
+	SHMUP
 }
 
 enum States {

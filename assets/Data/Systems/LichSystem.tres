@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="SystemData" format=3 uid="uid://cgmi7gli7d6xx"]
+
+[ext_resource type="PackedScene" uid="uid://c6nxk8jmvhv5i" path="res://scenes/lich_system.tscn" id="1_1w8js"]
+[ext_resource type="Script" uid="uid://bq70yaio5j201" path="res://assets/Scripts/system_data.gd" id="1_ewfiy"]
+[ext_resource type="Texture2D" uid="uid://bnyiirvwrx8gd" path="res://assets/Sprites/Systems/LichSystem-Sheet.png" id="2_mcchx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w8js"]
+atlas = ExtResource("2_mcchx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8b71f"]
+atlas = ExtResource("2_mcchx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y241a"]
+atlas = ExtResource("2_mcchx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mash"]
+atlas = ExtResource("2_mcchx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wllte"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_1w8js")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_8b71f")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_y241a")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_6mash")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_ewfiy")
+system_name = "LICH"
+controlled_by = 1
+sprite_frames = SubResource("SpriteFrames_wllte")
+scene = ExtResource("1_1w8js")
+needed_ships = 3
+metadata/_custom_type_script = "uid://bq70yaio5j201"

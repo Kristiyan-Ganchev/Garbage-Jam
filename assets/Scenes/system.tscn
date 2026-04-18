@@ -18,6 +18,9 @@ shader_parameter/corner_pixel = false
 [sub_resource type="Theme" id="Theme_b4qv8"]
 default_font = ExtResource("3_iy7gh")
 
+[sub_resource type="Theme" id="Theme_iy7gh"]
+default_font = ExtResource("3_iy7gh")
+
 [node name="System" type="Area2D" unique_id=1319791607]
 material = SubResource("ShaderMaterial_iy7gh")
 script = ExtResource("1_kuasm")
@@ -37,9 +40,18 @@ offset_bottom = 40.0
 
 [node name="Button" type="Button" parent="ColloniseMenu" unique_id=1233283768]
 layout_mode = 0
-offset_left = 16.0
-offset_top = -15.0
-offset_right = 95.0
-offset_bottom = 16.0
+offset_left = 13.0
+offset_top = -7.0
+offset_right = 85.0
+offset_bottom = 17.0
+scale = Vector2(0.555, 0.555)
 theme = SubResource("Theme_b4qv8")
 text = "REACH"
+
+[node name="ResourceLabel" type="Label" parent="." unique_id=1901133565]
+offset_left = -6.0
+offset_top = -34.0
+offset_right = 7.0
+offset_bottom = -11.0
+theme = SubResource("Theme_iy7gh")
+text = "@"

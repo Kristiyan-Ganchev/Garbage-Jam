@@ -16,6 +16,9 @@ class_name PlanetData
 static var ship_build_length = 10
 static var interstellar_build_length = 15
 static var fighter_build_length = 5
+static var mech_arms_build_length = 10
+static var mech_legs_build_length = 10
+static var mech_fin_build_length = 10
 
 var mat_countdown = mat_max_countdown
 var mat_acq_speed = 1
@@ -54,26 +57,58 @@ func process_build() -> void:
 	builder_counter +=1
 	if(builder_counter <= build_length):
 		return
-	if(build == GameEnums.Builds.SHIP):
-		MatManager.get_ships(1)
-		set_build(GameEnums.Builds.NONE)
-	elif(build == GameEnums.Builds.INTERSTELLAR):
-		MatManager.get_interstellars(1)
-		set_build(GameEnums.Builds.NONE)
-	elif(build == GameEnums.Builds.FIGHTER):
-		MatManager.get_fighters(1)
-		set_build(GameEnums.Builds.NONE)
+	#if(build == GameEnums.Builds.SHIP):
+		#MatManager.get_ships(1)
+		#set_build(GameEnums.Builds.NONE)
+	#elif(build == GameEnums.Builds.INTERSTELLAR):
+		#MatManager.get_interstellars(1)
+		#set_build(GameEnums.Builds.NONE)
+	#elif(build == GameEnums.Builds.FIGHTER):
+		#MatManager.get_fighters(1)
+		#set_build(GameEnums.Builds.NONE)
+	match build:
+		GameEnums.Builds.SHIP:
+			MatManager.get_ships(1)
+			set_build(GameEnums.Builds.NONE)
+		GameEnums.Builds.INTERSTELLAR:
+			MatManager.get_interstellars(1)
+			set_build(GameEnums.Builds.NONE)
+		GameEnums.Builds.FIGHTER:
+			MatManager.get_fighters(1)
+			set_build(GameEnums.Builds.NONE)
+		GameEnums.Builds.LEGS:
+			MatManager.get_mech_legs()
+			set_build(GameEnums.Builds.NONE)
+		GameEnums.Builds.ARMS:
+			MatManager.get_mech_arms()
+			set_build(GameEnums.Builds.NONE)
+		GameEnums.Builds.V_FIN:
+			MatManager.get_mech_fin()
+			set_build(GameEnums.Builds.NONE)
 	builder_counter = 0
 	
 func set_build(set_build: GameEnums.Builds) -> void:
 	build = set_build
-	if(build == GameEnums.Builds.SHIP):
-		build_length = ship_build_length
-	elif(build == GameEnums.Builds.INTERSTELLAR):
-		build_length = interstellar_build_length
-	elif(build == GameEnums.Builds.FIGHTER):
-		build_length = fighter_build_length
-	
+	#if(build == GameEnums.Builds.SHIP):
+		#build_length = ship_build_length
+	#elif(build == GameEnums.Builds.INTERSTELLAR):
+		#build_length = interstellar_build_length
+	#elif(build == GameEnums.Builds.FIGHTER):
+		#build_length = fighter_build_length
+	match build:
+		GameEnums.Builds.SHIP:
+			build_length = ship_build_length
+		GameEnums.Builds.INTERSTELLAR:
+			build_length = interstellar_build_length
+		GameEnums.Builds.FIGHTER:
+			build_length = fighter_build_length
+		GameEnums.Builds.LEGS:
+			build_length = mech_legs_build_length
+		GameEnums.Builds.ARMS:
+			build_length = mech_arms_build_length
+		GameEnums.Builds.V_FIN:
+			build_length = mech_fin_build_length
+			
 func cancel_build() -> void:
 	build = GameEnums.Builds.NONE
 	builder_counter = 0

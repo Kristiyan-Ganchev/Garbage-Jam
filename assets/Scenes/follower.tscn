@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://b32gfty2e1f4e"]
+
+[ext_resource type="Script" uid="uid://cdxbiwkbhw45x" path="res://assets/Scripts/follower.gd" id="1_nqxtc"]
+[ext_resource type="Texture2D" uid="uid://hvui4x04427k" path="res://assets/Sprites/Enemies/follower-die-Sheet.png" id="2_abi13"]
+[ext_resource type="Shader" uid="uid://dmapfwq1lrmbr" path="res://assets/Shaders/hit_shader.gdshader" id="2_tgjg2"]
+[ext_resource type="Texture2D" uid="uid://8me0nm3y6t71" path="res://assets/Sprites/Enemies/follower-idle-Sheet.png" id="3_4lcj2"]
+[ext_resource type="AudioStream" uid="uid://kcyabs1mbt38" path="res://assets/Data/Sounds/8bit_bomb_explosion.wav" id="5_ekjrf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ekjrf"]
+resource_local_to_scene = true
+shader = ExtResource("2_tgjg2")
+shader_parameter/active = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lcj2"]
+atlas = ExtResource("2_abi13")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgjg2"]
+atlas = ExtResource("2_abi13")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekjrf"]
+atlas = ExtResource("2_abi13")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgys4"]
+atlas = ExtResource("2_abi13")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmw5o"]
+atlas = ExtResource("2_abi13")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe2qb"]
+atlas = ExtResource("2_abi13")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5bt6"]
+atlas = ExtResource("2_abi13")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpn75"]
+atlas = ExtResource("3_4lcj2")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om8d5"]
+atlas = ExtResource("3_4lcj2")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei0ug"]
+atlas = ExtResource("3_4lcj2")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk7x5"]
+atlas = ExtResource("3_4lcj2")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8oy0"]
+atlas = ExtResource("3_4lcj2")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5i1w"]
+animations = [{
+"frames": [{
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_4lcj2")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_tgjg2")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_ekjrf")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_sgys4")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_gmw5o")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_fe2qb")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_q5bt6")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpn75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om8d5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei0ug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk7x5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8oy0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c5i1w"]
+radius = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nqxtc"]
+
+[node name="Follower" type="CharacterBody2D" unique_id=681726335]
+collision_layer = 16
+collision_mask = 133
+script = ExtResource("1_nqxtc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1037552613]
+material = SubResource("ShaderMaterial_ekjrf")
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_c5i1w")
+animation = &"die"
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1452810368]
+collision_layer = 16
+collision_mask = 133
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1097377014]
+shape = SubResource("CircleShape2D_c5i1w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=428028695]
+shape = SubResource("CircleShape2D_nqxtc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=913763487]
+rotation = -1.5707964
+stream = ExtResource("5_ekjrf")
+volume_db = 5.5

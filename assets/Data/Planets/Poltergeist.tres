@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="PlanetData" format=3 uid="uid://k88cm3ng4lgv"]
+
+[ext_resource type="Script" uid="uid://bnrxmhpmks5rt" path="res://assets/Scripts/planet_data.gd" id="1_5q5er"]
+[ext_resource type="Texture2D" uid="uid://er8uv5gd8p4m" path="res://assets/Sprites/Planets/Poltergeist-Sheet.png" id="2_l732c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq1la"]
+atlas = ExtResource("2_l732c")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v705j"]
+atlas = ExtResource("2_l732c")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5uxc"]
+atlas = ExtResource("2_l732c")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5086f"]
+atlas = ExtResource("2_l732c")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qusc4"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_qq1la")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_v705j")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_k5uxc")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_5086f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_5q5er")
+planet_name = "POLTERGEIST"
+controlled_by = 1
+sprite_frames = SubResource("SpriteFrames_qusc4")
+mat_type = 1
+needed_ships_to_colonise = 3
+metadata/_custom_type_script = "uid://bnrxmhpmks5rt"

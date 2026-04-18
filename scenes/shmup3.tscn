@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://026d3qrur278"]
+
+[ext_resource type="PackedScene" uid="uid://0lnyo8l6ceo2" path="res://assets/Scenes/player.tscn" id="1_tvigi"]
+[ext_resource type="Script" uid="uid://eaayj7c5terd" path="res://scenes/camera_2d.gd" id="2_rmcpc"]
+[ext_resource type="PackedScene" uid="uid://bpm0s5fmosc6b" path="res://scenes/Level3.tscn" id="3_tvigi"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1xjmn"]
+distance = -124.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dboio"]
+distance = -121.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wttgm"]
+distance = -159.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vkagt"]
+distance = -160.0
+
+[node name="Shmup3" type="Node2D" unique_id=1497799082]
+
+[node name="Player" parent="." unique_id=754184571 instance=ExtResource("1_tvigi")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=796116660 groups=["camera"]]
+script = ExtResource("2_rmcpc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1277827142]
+collision_layer = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=152677462]
+shape = SubResource("WorldBoundaryShape2D_1xjmn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1599613529]
+rotation = -3.1415927
+shape = SubResource("WorldBoundaryShape2D_dboio")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=527875437]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_wttgm")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=188988073]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_vkagt")
+
+[node name="Level3" parent="." unique_id=1612620878 instance=ExtResource("3_tvigi")]

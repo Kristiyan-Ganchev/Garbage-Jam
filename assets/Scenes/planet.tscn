@@ -20,10 +20,22 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spoox"]
+bg_color = Color(0.6, 0.6, 0.6, 0.57254905)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqolr"]
+bg_color = Color(0.98953336, 0.9620486, 0.9620215, 1)
+
 [sub_resource type="Theme" id="Theme_vqolr"]
 default_font = ExtResource("4_spoox")
 
 [sub_resource type="Theme" id="Theme_spoox"]
+default_font = ExtResource("4_spoox")
+
+[sub_resource type="Theme" id="Theme_52lhm"]
+default_font = ExtResource("4_spoox")
+
+[sub_resource type="Theme" id="Theme_uw22e"]
 default_font = ExtResource("4_spoox")
 
 [node name="Planet" type="Area2D" unique_id=444415671 groups=["planet"]]
@@ -44,30 +56,52 @@ animation = &"idle"
 position = Vector2(27, 8)
 
 [node name="planet_info_ui" parent="MenuAnchor" unique_id=413388823 instance=ExtResource("3_ekbt2")]
+position = Vector2(5, 0)
 
 [node name="BuildPB" type="ProgressBar" parent="." unique_id=736977095]
-offset_left = -25.0
+offset_left = -22.0
 offset_top = -13.0
-offset_right = -21.0
+offset_right = -18.0
 offset_bottom = 14.0
+theme_override_styles/background = SubResource("StyleBoxFlat_spoox")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vqolr")
 max_value = 1.0
+fill_mode = 3
+show_percentage = false
 
 [node name="ColloniseMenu" type="Node2D" parent="." unique_id=845136262]
 
 [node name="Collonise" type="Button" parent="ColloniseMenu" unique_id=204981789]
-offset_left = 12.0
-offset_top = -12.0
-offset_right = 136.0
-offset_bottom = 12.0
+offset_left = 18.0
+offset_top = -7.0
+offset_right = 142.0
+offset_bottom = 17.0
+scale = Vector2(0.6, 0.6)
 theme = SubResource("Theme_vqolr")
 text = "COLLONISE"
 
 [node name="AttackMenu" type="Node2D" parent="." unique_id=1880261596]
 
 [node name="Attack" type="Button" parent="AttackMenu" unique_id=1052383191]
-offset_left = 12.0
-offset_top = -12.0
-offset_right = 97.0
-offset_bottom = 12.0
+offset_left = 18.0
+offset_top = -7.0
+offset_right = 103.0
+offset_bottom = 17.0
+scale = Vector2(0.6, 0.6)
 theme = SubResource("Theme_spoox")
 text = "ATTACK"
+
+[node name="ResourceLabel" type="Label" parent="." unique_id=1894612969]
+offset_left = -6.0
+offset_top = -33.0
+offset_right = 17.0
+offset_bottom = -10.0
+theme = SubResource("Theme_52lhm")
+text = "A"
+
+[node name="BuildLbl" type="Label" parent="." unique_id=1679185090]
+offset_left = -37.0
+offset_top = -8.0
+offset_right = -24.0
+offset_bottom = 8.0
+theme = SubResource("Theme_uw22e")

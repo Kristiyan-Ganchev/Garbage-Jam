@@ -25,9 +25,9 @@ text = "TERRA"
 label_settings = SubResource("LabelSettings_eoj3i")
 
 [node name="PopLabel" type="Label" parent="." unique_id=1000110572]
-offset_left = 67.0
+offset_left = 82.0
 offset_top = -16.0
-offset_right = 80.0
+offset_right = 95.0
 theme = SubResource("Theme_glpcn")
 theme_override_font_sizes/font_size = 16
 text = "0"

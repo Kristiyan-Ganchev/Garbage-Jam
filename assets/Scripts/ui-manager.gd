@@ -27,6 +27,24 @@ func enable_ui(ui:GameEnums.UIs) -> void:
 			GameEnums.UIs.TURN:
 				wipe_ui()
 				ui_screens["TurnUi"].visible = true
+			GameEnums.UIs.SHMUP:
+				wipe_ui()
+				ui_screens["ShmupUi"].visible = true
 		if TurnManager.currentElement && TurnManager.currentElement is Planet:
 			var planet = TurnManager.currentElement as Planet
 			planet.wipe_planet_ui()
+
+func change_hp(amount:int) -> void:
+	ui_screens["ShmupUi"].change_hp(amount)
+
+func change_lives(amount:int) ->void:
+	ui_screens["ShmupUi"].change_lives(amount)
+	
+func update_mech() -> void:
+	ui_screens["TurnUi"].update_mech()
+	
+func eyecatch() -> void:
+	ui_screens["TurnUi"].eyectch()
+	
+func play_cutscene() -> void:
+	ui_screens["Cutscene"].play_cutscene()

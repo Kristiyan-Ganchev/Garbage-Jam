@@ -23,13 +23,14 @@ MatManager="*uid://eemsuokaiq46"
 UiManager="*uid://cr1hfqpelii3v"
 Ui="*uid://tufagnmiix15"
 TurnManager="*uid://s5x664o8jd24"
+AudioManager="*uid://diyrk2gvflo7m"
 
 [display]
 
 window/size/viewport_width=320
 window/size/viewport_height=240
-window/size/window_width_override=1920
-window/size/window_height_override=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
@@ -37,6 +38,7 @@ window/stretch/scale_mode="integer"
 
 planet=""
 player=""
+camera=""
 
 [input]
 
@@ -84,7 +86,9 @@ shoot={
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Planets"
+2d_physics/layer_3="player_bullets"
 2d_physics/layer_5="Enemies"
+2d_physics/layer_8="LevelBounds"
 
 [physics]
 
@@ -96,5 +100,6 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true

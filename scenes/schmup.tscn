@@ -1,12 +1,44 @@
 [gd_scene format=3 uid="uid://bkc03ws3qbotv"]
 
 [ext_resource type="PackedScene" uid="uid://0lnyo8l6ceo2" path="res://assets/Scenes/player.tscn" id="1_4a4k0"]
-[ext_resource type="PackedScene" uid="uid://21wvdobgs68a" path="res://scenes/level.tscn" id="2_jbow1"]
+[ext_resource type="Script" uid="uid://eaayj7c5terd" path="res://scenes/camera_2d.gd" id="2_ddvq3"]
+[ext_resource type="PackedScene" uid="uid://21wvdobgs68a" path="res://scenes/level.tscn" id="4_kborp"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jbow1"]
+distance = -124.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ddvq3"]
+distance = -121.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kborp"]
+distance = -159.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o1nea"]
+distance = -160.0
 
 [node name="Schmup" type="Node2D" unique_id=1530138245]
 
 [node name="Player" parent="." unique_id=1096022753 instance=ExtResource("1_4a4k0")]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=471883417]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=471883417 groups=["camera"]]
+script = ExtResource("2_ddvq3")
 
-[node name="Level" parent="." unique_id=906371633 instance=ExtResource("2_jbow1")]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=675949618]
+collision_layer = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=880295383]
+shape = SubResource("WorldBoundaryShape2D_jbow1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1541371422]
+rotation = -3.1415927
+shape = SubResource("WorldBoundaryShape2D_ddvq3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1879002304]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_kborp")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=36746735]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_o1nea")
+
+[node name="Level" parent="." unique_id=906371633 instance=ExtResource("4_kborp")]
